@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>శ్రీ వినాయక పూజా విధానం & వ్రత కథ | Sri Vinayaka Puja Vidhanam & Vrata Katha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mandali&family=Tiro+Telugu:ital@0;1&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #800000;
+            --saffron: #e65100;
+            --saffron-light: #fff3e0;
+            --gold-accent: #d4af37;
+            --bg-light: #fcf9f2;
+            --card-bg: #ffffff;
+            --text-dark: #2c1d11;
+            --text-muted: #5d4037;
+            --border-color: #e0d0b8;
+            --shadow: 0 10px 30px rgba(128, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-family: 'Mandali', 'Roboto', sans-serif;
+            line-height: 2;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(230, 81, 0, 0.05), transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(212, 175, 55, 0.05), transparent 50%);
+            background-attachment: fixed;
+            padding-bottom: 80px;
+        }
+
+        .lang-switcher {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #ffffff;
+            border-bottom: 2px solid var(--gold-accent);
+            text-align: center;
+            padding: 12px 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .lang-btn {
+            background-color: var(--saffron-light);
+            color: var(--primary-red);
+            border: 2px solid var(--saffron);
+            padding: 8px 24px;
+            margin: 0 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active, .lang-btn:hover {
+            background-color: var(--saffron);
+            color: #ffffff;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 30px;
+            background: linear-gradient(135deg, #fff8f0 0%, #fff0e6 100%);
+            border-bottom: 3px solid var(--gold-accent);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-family: 'Tiro Telugu', serif;
+            font-size: 2.3rem;
+            color: var(--primary-red);
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--saffron);
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .image-card {
+            text-align: center;
+            margin: 20px 0 35px;
+            padding: 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .image-card img {
+            max-width: 100%;
+            height: auto;
+            max-height: 380px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        h2 {
+            font-family: 'Tiro Telugu', serif;
+            color: var(--primary-red);
+            font-size: 1.7rem;
+            margin-top: 10px;
+            margin-bottom: 18px;
+            border-bottom: 2px solid var(--saffron-light);
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--saffron);
+        }
+
+        .mantra {
+            color: var(--primary-red);
+            background: var(--saffron-light);
+            padding: 20px;
+            border-left: 5px solid var(--saffron);
+            margin: 20px 0;
+            border-radius: 0 12px 12px 0;
+            font-size: 1.1rem;
+            white-space: pre-line;
+            font-weight: 600;
+        }
+
+        .grid-2col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .grid-item {
+            background: #fffcf8;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border: 1px solid #f0e4d4;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+        }
+
+        .grid-item::before {
+            content: '🌸';
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+
+        .story-section h3 {
+            font-family: 'Tiro Telugu', serif;
+            color: var(--saffron);
+            margin: 30px 0 12px;
+            font-size: 1.35rem;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 6px;
+        }
+
+        .story-section p {
+            margin-bottom: 18px;
+            color: var(--text-dark);
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #fff8f0 0%, #fff0e6 100%);
+            border-top: 3px solid var(--gold-accent);
+            color: var(--primary-red);
+            font-size: 1.3rem;
+            font-weight: bold;
+            font-family: 'Tiro Telugu', serif;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8rem; }
+            .card { padding: 22px; }
+            .container { padding: 0 12px; }
+            .mantra { font-size: 1rem; padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Language Selector Header -->
+    <div class="lang-switcher">
+        <button class="lang-btn active" onclick="switchLanguage('te')">తెలుగు (Telugu)</button>
+        <button class="lang-btn" onclick="switchLanguage('en')">English</button>
+    </div>
+
+    <!-- Banner Image -->
+
+    <!-- TELUGU CONTENT START -->
+    <div id="telugu-content" class="lang-content active">
+        <header>
+            <h1>శ్రీ వినాయక పూజా విధానం</h1>
+            <p>వ్రతకథ మరియు షోడశోపచార పూజ</p>
+        </header>
+
+        <div class="container">
+            <!-- Initial Mantras & Sankalpam -->
+            <div class="card">
+                <div class="mantra">
+శుక్లాంబరధరం విష్ణుం శశివర్ణం చతుర్భుజమ్ |
+ప్రసన్నవదనం ధ్యాయేత్ సర్వవిఘ్నోపశాంతయే ||
+                </div>
+
+                <h2>సంకల్పము</h2>
+                <p style="font-size: 1.1rem;">
+                    మమ ఉపాత్త సమస్త దురితక్షయ ద్వారా శ్రీ వరసిద్ధి వినాయక దేవతా ప్రీత్యర్థం, శుభే శోభనే ముహూర్తే, సమస్త దేవతా బ్రాహ్మణ హరిహర గురు చరణ సన్నిధౌ, అస్మాకం సహ కుటుంబానాం క్షేమ స్థైర్య విజయ అభయ ఆయురారోగ్య ఐశ్వర్య అభివృద్ధ్యర్థం, ధర్మార్థ కామ మోక్ష చతుర్విధ పురుషార్థ ఫల సిద్ధ్యర్థం, ధన ధాన్య సమృద్ధ్యర్థం, ఇష్ట కామ్యార్థ సిద్ధ్యర్థం, సకల లోక కల్యాణార్థం, సర్వ విఘ్న నివారణార్థం, వేద సంప్రదాయాభివృద్ధ్యర్థం, శ్రీ వరసిద్ధి వినాయక దేవతామ్ ఉద్దిస్య యావచ్ఛక్తి ధ్యాన ఆవాహనాది షోడశోపచార పూజాం కరిష్యే!
+                </p>
+
+                <div class="mantra">
+ఘంటానాదం చేస్తూ:
+ఆగమార్థం తు దేవానాం గమనార్థం తు రాక్షసామ్ |
+కురు ఘంటారవం తత్ర దేవతాహ్వాన లాంఛనమ్ ||
+                </div>
+
+                <h2>కలశారాధన</h2>
+                <div class="mantra">
+కలశస్య ముఖే విష్ణుః కంటే రుద్ర స్సమాశ్రితః |
+మూలే తత్ర స్థితో బ్రహ్మా మధ్యే మాతృగణాః స్మృతాః ||
+కుక్షౌ తు సాగరా స్సర్వే సప్త ద్వీపా వసుంధరా |
+ఋగ్వేదో థ యజుర్వేద స్సామవేదో హ్యథర్వణః ||
+అంగైశ్చ సహితా స్సర్వే కలశాంబు సమాశ్రితాః |
+గంగే చ యమునే చైవ గోదావరి సరస్వతి |
+నర్మదే సింధు కావేరి జలేస్మిన్ సన్నిధిం కురు ||
+                </div>
+                <p style="font-weight: bold; color: var(--saffron);">పూజా ద్రవ్యాణి దైవమాత్మానం సంప్రోక్ష్య</p>
+            </div>
+
+            <!-- Ganapati Puja & Shodashopachara -->
+            <div class="card">
+                <h2>గణపతి పూజ</h2>
+                <p style="margin-bottom: 15px; font-weight: bold;">ఆదౌ నిర్విఘ్న పరిసమాప్త్యర్థం శ్రీ గణాధిపతి ప్రార్థనాం కరిష్యే</p>
+
+                <div class="mantra">
+వక్రతుండ మహాకాయ కోటిసూర్య సమప్రభ |
+నిర్విఘ్నం కురు మే దేవ సర్వకార్యేషు సర్వదా ||
+
+సుముఖశ్చైకదంతశ్చ కపిలో గజకర్ణకః |
+లంబోదరశ్చ వికటో విఘ్నరాజో గణాధిపః ||
+ధూమకేతుర్గణాధ్యక్షః ఫాలచంద్రో గజాననః |
+వక్రతుండ శ్శూర్పకర్ణో హేరంభః స్కందపూర్వజః ||
+షోడశైతాని నామాని యః పఠేచ్ఛృణుయాదపి |
+విద్యారంభే వివాహే చ ప్రవేశే నిర్గమే తథా |
+సంగ్రామే సర్వకార్యేషు విఘ్నస్తస్య న జాయతే ||
+                </div>
+
+                <h2>శ్రీ వినాయక షోడశోపచార పూజ</h2>
+                <p><strong>ధ్యానమ్:</strong></p>
+                <div class="mantra">
+భవసంచిత పాపౌఘ విధ్వంసన విచక్షణమ్ |
+విఘ్నాంధకార భాస్వంతం విఘ్నరాజ మహం భజే ||
+ఏకదంతం శూర్పకర్ణం గజవక్త్రం చతుర్భుజమ్ |
+పాశాంకుశ ధరం దేవం ధ్యాయేత్ సిద్ధివినాయకమ్ ||
+ఉత్తమం గణనాథస్య వ్రతం సంపత్కరం శుభమ్ |
+భక్తాభీష్టప్రదం తస్మాత్ ధ్యాయేత్తం విఘ్ననాయకమ్ ||
+ధ్యాయేద్గజాననం దేవం తప్తకాంచన సన్నిభమ్ |
+చతుర్భుజం మహాకాయం సర్వాభరణభూషితమ్ ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - ధ్యాయామి</p>
+
+                <p><strong>ఆవాహనమ్:</strong></p>
+                <div class="mantra">
+అత్రాగచ్ఛ జగద్వంద్య సురరాజార్చితేశ్వర |
+అనాథనాథ సర్వజ్ఞ గౌరీగర్భ సముద్భవ ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - ఆవాహయామి</p>
+
+                <p><strong>ఆసనమ్:</strong></p>
+                <div class="mantra">
+మౌక్తికైః పుష్యరాగైశ్చ నానారత్నైర్విరాజితమ్ |
+రత్న సింహాసనం చారు ప్రీత్యర్థం ప్రతిగృహ్యతామ్ ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - ఆసనం సమర్పయామి</p>
+
+                <p><strong>పాద్యమ్:</strong></p>
+                <div class="mantra">
+గజవక్త్ర నమస్తేస్తు సర్వాభీష్టప్రదాయక |
+భక్త్యా పాద్యం మయాదత్తం గృహాణ ద్విరదానన ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - పాద్యం సమర్పయామి</p>
+
+                <p><strong>అర్ఘ్యమ్:</strong></p>
+                <div class="mantra">
+గౌరీపుత్ర నమస్తేస్తు శంకరప్రియ నందన |
+గృహాణార్ఘ్యం మయాదత్తం గంధపుష్పాక్షతైర్యుతమ్ ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - అర్ఘ్యం సమర్పయామి</p>
+
+                <p><strong>ఆచమనీయమ్:</strong></p>
+                <div class="mantra">
+అనాథనాథ సర్వజ్ఞ గీర్వాణ గణ పూజిత |
+గృహాణాచమనం దేవ తుభ్యం దత్తం మయా ప్రభో ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - ఆచమనీయం సమర్పయామి</p>
+
+                <p><strong>మధుపర్కమ్:</strong></p>
+                <div class="mantra">
+దధిక్షీర సమాయుక్తం మధ్వాజ్యేన సమన్వితమ్ |
+మధుపర్కం గృహాణేదం గజవక్త్ర నమోస్తు తే ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - మధుపర్కం సమర్పయామి</p>
+
+                <p><strong>స్నానమ్:</strong></p>
+                <div class="mantra">
+స్నానం పంచామృతైర్దేవ గృహాణ గణనాయక |
+అనాథనాథ సర్వజ్ఞ గీర్వాణ గణపూజిత ||
+                </div>
+                <p style="font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - పంచామృతస్నానం సమర్పయామి</p>
+                <div class="mantra">
+గంగాది సర్వతీర్థేభ్య ఆహృతై రమలైర్జలైః |
+స్నానం కురుష్వ భగవన్ ఉమాపుత్ర నమోస్తు తే ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - శుద్ధోదకస్నానం సమర్పయామి</p>
+
+                <p><strong>వస్త్రమ్:</strong></p>
+                <div class="mantra">
+రక్తవస్త్రద్వయం చారు దేవయోగ్యం చ మంగళమ్ |
+శుభప్రదం గృహాణ త్వం లంబోదర హరాత్మజ ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - వస్త్రయుగ్మం సమర్పయామి</p>
+
+                <p><strong>యజ్ఞోపవీతమ్:</strong></p>
+                <div class="mantra">
+రాజితం బ్రహ్మసూత్రం కాంచనంచోత్తరీయకమ్ |
+గృహాణ దేవ సర్వజ్ఞ భక్తానా మిష్టదాయక ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - యజ్ఞోపవీతం సమర్పయామి</p>
+
+                <p><strong>గంధమ్:</strong></p>
+                <div class="mantra">
+చందనాగరుకర్పూర కస్తూరీ కుంకుమాన్వితమ్ |
+విలేపనం సురశ్రేష్ఠ ప్రీత్యర్థం ప్రతిగృహ్యతామ్ ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - గంధాన్ సమర్పయామి</p>
+
+                <p><strong>పుష్పాక్షతలు:</strong></p>
+                <div class="mantra">
+అక్షతాన్ ధవళాన్ దివ్యాన్ శాలీయాంస్తండులాన్ శుభాన్ |
+గృహాణ పరమానంద శంభుపుత్ర నమోస్తు తే ||
+                </div>
+                <p style="font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - అక్షతాన్ సమర్పయామి</p>
+                <div class="mantra">
+సుగంధాని సుపుష్పాణి జాజీకుందముఖాని చ |
+ఏకవింశతి పత్రాణి సంగృహాణ నమోస్తు తే ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - పుష్పాణి సమర్పయామి</p>
+            </div>
+
+            <!-- Anga Puja -->
+            <div class="card">
+                <h2>అంగ పూజ</h2>
+                <div class="grid-2col">
+                    <div class="grid-item">గణేశాయ నమః - పాదౌ పూజయామి</div>
+                    <div class="grid-item">ఏకదంతాయ నమః - జానునీ పూజయామి</div>
+                    <div class="grid-item">విఘ్నరాజాయ నమః - జంఘే పూజయామి</div>
+                    <div class="grid-item">ఆఖువాహనాయ నమః - ఊరూ పూజయామి</div>
+                    <div class="grid-item">హేరంబాయ నమః - కటిం పూజయామి</div>
+                    <div class="grid-item">లంబోదరాయ నమః - ఉదరం పూజయామి</div>
+                    <div class="grid-item">గణనాథాయ నమః - నాభిం పూజయామి</div>
+                    <div class="grid-item">గణేశాయ నమః - హృదయం పూజయామి</div>
+                    <div class="grid-item">స్థూలకంఠాయ నమః - కంఠం పూజయామి</div>
+                    <div class="grid-item">స్కందాగ్రజాయ నమః - స్కంధౌ పూజయామి</div>
+                    <div class="grid-item">పాశహస్తాయ నమః - హస్తౌ పూజయామి</div>
+                    <div class="grid-item">గజవక్త్రాయ నమః - వక్త్రం పూజయామి</div>
+                    <div class="grid-item">విఘ్నహంత్రే నమః - నేత్రే పూజయామి</div>
+                    <div class="grid-item">శూర్పకర్ణాయ నమః - కర్ణౌ పూజయామి</div>
+                    <div class="grid-item">ఫాలచంద్రాయ నమః - లలాటం పూజయామి</div>
+                    <div class="grid-item">సర్వేశ్వరాయ నమః - శిరః పూజయామి</div>
+                    <div class="grid-item">విఘ్నరాజాయ నమః - సర్వాణ్యంగాని పూజయామి</div>
+                </div>
+            </div>
+
+            <!-- Ekavimsati Patra Puja -->
+            <div class="card">
+                <h2>ఏకవింశతి పత్ర పూజ (21 పత్రాల పూజ)</h2>
+                <div class="grid-2col">
+                    <div class="grid-item">1. సుముఖాయ నమః - మాచీపత్రం పూజయామి</div>
+                    <div class="grid-item">2. గణాధిపాయ నమః - బృహతీపత్రం పూజయామి</div>
+                    <div class="grid-item">3. ఉమాపుత్రాయ నమః - బిల్వపత్రం పూజయామి</div>
+                    <div class="grid-item">4. గజాననాయ నమః - దూర్వాయుగ్మం పూజయామి</div>
+                    <div class="grid-item">5. హరసూనవే నమః - దత్తూరపత్రం పూజయామి</div>
+                    <div class="grid-item">6. లంబోదరాయ నమః - బదరీపత్రం పూజయామి</div>
+                    <div class="grid-item">7. గుహాగ్రజాయ నమః - అపామార్గపత్రం పూజయామి</div>
+                    <div class="grid-item">8. గజకర్ణాయ నమః - తులసీపత్రం పూజయామి</div>
+                    <div class="grid-item">9. ఏకదంతాయ నమః - చూతపత్రం పూజయామి</div>
+                    <div class="grid-item">10. వికటాయ నమః - కరవీరపత్రం పూజయామి</div>
+                    <div class="grid-item">11. భిన్నదంతాయ నమః - విష్ణుక్రాంతపత్రం పూజయామి</div>
+                    <div class="grid-item">12. వటవే నమః - దాడిమీపత్రం పూజయామి</div>
+                    <div class="grid-item">13. సర్వేశ్వరాయ నమః - దేవదారుపత్రం పూజయామి</div>
+                    <div class="grid-item">14. ఫాలచంద్రాయ నమః - మరువకపత్రం పూజయామి</div>
+                    <div class="grid-item">15. హేరంబాయ నమః - సింధువారపత్రం పూజయామి</div>
+                    <div class="grid-item">16. శూర్పకర్ణాయ నమః - జాజీపత్రం పూజయామి</div>
+                    <div class="grid-item">17. సురాగ్రజాయ నమః - గండకీపత్రం పూజయామి</div>
+                    <div class="grid-item">18. ఇభవక్త్రాయ నమః - శమీపత్రం పూజయామి</div>
+                    <div class="grid-item">19. వినాయకాయ నమః - అశ్వత్థపత్రం పూజయామి</div>
+                    <div class="grid-item">20. సురసేవితాయ నమః - అర్జునపత్రం పూజయామి</div>
+                    <div class="grid-item">21. కపిలాయ నమః - అర్కపత్రం పూజయామి</div>
+                </div>
+                <p style="margin-top:20px; color:var(--primary-red); font-weight:bold; text-align:center; font-size:1.1rem;">శ్రీ గణేశ్వరాయ నమః - ఏకవింశతి పత్రాణి పూజయామి</p>
+            </div>
+
+            <!-- Ashtottara Shatanamavali -->
+            <div class="card">
+                <h2>శ్రీ వినాయక అష్టోత్తర శతనామావళి</h2>
+                <div class="grid-2col" style="font-size:1rem;">
+                    <div class="grid-item">ఓం గజాననాయ నమః</div>
+                    <div class="grid-item">ఓం గణాధ్యక్షాయ నమః</div>
+                    <div class="grid-item">ఓం విఘ్నరాజాయ నమః</div>
+                    <div class="grid-item">ఓం వినాయకాయ నమః</div>
+                    <div class="grid-item">ఓం ద్వైమాతురాయ నమః</div>
+                    <div class="grid-item">ఓం ద్విముఖాయ నమః</div>
+                    <div class="grid-item">ఓం ప్రముఖాయ నమః</div>
+                    <div class="grid-item">ఓం సుముఖాయ నమః</div>
+                    <div class="grid-item">ఓం కృతినే నమః</div>
+                    <div class="grid-item">ఓం సుప్రదీపాయ నమః</div>
+                    <div class="grid-item">ఓం సుఖనిధయే నమః</div>
+                    <div class="grid-item">ఓం సురాధ్యక్షాయ నమః</div>
+                    <div class="grid-item">ఓం సురారిఘ్నాయ నమః</div>
+                    <div class="grid-item">ఓం మహాగణపతయే నమః</div>
+                    <div class="grid-item">ఓం మాన్యాయ నమః</div>
+                    <div class="grid-item">ఓం మహాకాలాయ నమః</div>
+                    <div class="grid-item">ఓం మహాబలాయ నమః</div>
+                    <div class="grid-item">ఓం హేరంభాయ నమః</div>
+                    <div class="grid-item">ఓం లంబజఠరాయ నమః</div>
+                    <div class="grid-item">ఓం హ్రస్వగ్రీవాయ నమః</div>
+                    <div class="grid-item">ఓం మహోదరాయ నమః</div>
+                    <div class="grid-item">ఓం మదోత్కటాయ నమః</div>
+                    <div class="grid-item">ఓం మహావీరాయ నమః</div>
+                    <div class="grid-item">ఓం మంత్రిణే నమః</div>
+                    <div class="grid-item">ఓం మంగళ సుస్వరాయ నమః</div>
+                    <div class="grid-item">ఓం ప్రమథాయ నమః</div>
+                    <div class="grid-item">ఓం ప్రథమాయ నమః</div>
+                    <div class="grid-item">ఓం ప్రాజ్ఞాయ నమః</div>
+                    <div class="grid-item">ఓం విఘ్నకర్త్రే నమః</div>
+                    <div class="grid-item">ఓం విఘ్నహంత్రే నమః</div>
+                    <div class="grid-item">ఓం విశ్వనేత్రే నమః</div>
+                    <div class="grid-item">ఓం విరాట్పతయే నమః</div>
+                    <div class="grid-item">ఓం శ్రీపతయే నమః</div>
+                    <div class="grid-item">ఓం వాక్పతయే నమః</div>
+                    <div class="grid-item">ఓం శృంగారిణే నమః</div>
+                    <div class="grid-item">ఓం ఆశ్రితవత్సలాయ నమః</div>
+                    <div class="grid-item">ఓం శివప్రియాయ నమః</div>
+                    <div class="grid-item">ఓం శీఘ్రకారిణే నమః</div>
+                    <div class="grid-item">ఓం భక్తజీవితాయ నమః</div>
+                    <div class="grid-item">ఓం శాశ్వతాయ నమః</div>
+                    <div class="grid-item">ఓం జితమన్మథాయ నమః</div>
+                    <div class="grid-item">ఓం భవాత్మజాయ నమః</div>
+                    <div class="grid-item">ఓం ఐశ్వర్యకారణాయ నమః</div>
+                    <div class="grid-item">ఓం బలోత్థితాయ నమః</div>
+                    <div class="grid-item">ఓం జ్యాయసే నమః</div>
+                    <div class="grid-item">ఓం యక్షకిన్నరసేవితాయ నమః</div>
+                    <div class="grid-item">ఓం పురాణపురుషాయ నమః</div>
+                    <div class="grid-item">ఓం గంగాసుతాయ నమః</div>
+                    <div class="grid-item">ఓం పూష్ణే నమః</div>
+                    <div class="grid-item">ఓం గణాధీశాయ నమః</div>
+                    <div class="grid-item">ఓం పుష్కరోక్షిప్తవారిణే నమః</div>
+                    <div class="grid-item">ఓం గంభీరనినాదాయ నమః</div>
+                    <div class="grid-item">ఓం అగ్రగామినే నమః</div>
+                    <div class="grid-item">ఓం అగ్రపూజ్యాయ నమః</div>
+                    <div class="grid-item">ఓం నేత్రకృతే నమః</div>
+                    <div class="grid-item">ఓం చామీకరప్రభాయ నమః</div>
+                    <div class="grid-item">ఓం సర్వాయ నమః</div>
+                    <div class="grid-item">ఓం సర్వోపాస్యాయ నమః</div>
+                    <div class="grid-item">ఓం సర్వకర్త్రే నమః</div>
+                    <div class="grid-item">ఓం సర్వనేత్రే నమః</div>
+                    <div class="grid-item">ఓం సర్వసిద్ధిప్రదాయ నమః</div>
+                    <div class="grid-item">ఓం సర్వసిద్ధయే నమః</div>
+                    <div class="grid-item">ఓం పంచహస్తాయ నమః</div>
+                    <div class="grid-item">ఓం పార్వతీనందనాయ నమః</div>
+                    <div class="grid-item">ఓం ప్రభవే నమః</div>
+                    <div class="grid-item">ఓం కుమారగురవే నమః</div>
+                    <div class="grid-item">ఓం అక్షోభ్యాయ నమః</div>
+                    <div class="grid-item">ఓం కుంజరాసురభంజనాయ నమః</div>
+                    <div class="grid-item">ఓం ప్రమోదాయ నమః</div>
+                    <div class="grid-item">ఓం మోదకప్రియాయ నమః</div>
+                    <div class="grid-item">ఓం కాంతిమతే నమః</div>
+                    <div class="grid-item">ఓం ధృతిమతే నమః</div>
+                    <div class="grid-item">ఓం కామినే నమః</div>
+                    <div class="grid-item">ఓం కపిత్థవనప్రియాయ నమః</div>
+                    <div class="grid-item">ఓం బ్రహ్మచారిణే నమః</div>
+                    <div class="grid-item">ఓం బ్రహ్మరూపిణే నమః</div>
+                    <div class="grid-item">ఓం బ్రహ్మవిద్యాది దానభువే నమః</div>
+                    <div class="grid-item">ఓం జిష్ణవే నమః</div>
+                    <div class="grid-item">ఓం విష్ణుప్రియాయ నమః</div>
+                    <div class="grid-item">ఓం వటవే నమః</div>
+                    <div class="grid-item">ఓం అభీష్టవరదాయ నమః</div>
+                    <div class="grid-item">ఓం జ్యోతిషే నమః</div>
+                    <div class="grid-item">ఓం భక్తనిధయే నమః</div>
+                    <div class="grid-item">ఓం భావగమ్యాయ నమః</div>
+                    <div class="grid-item">ఓం మంగళప్రదాయ నమః</div>
+                    <div class="grid-item">ఓం అవ్యక్తాయ నమః</div>
+                    <div class="grid-item">ఓం అప్రాకృతపరాక్రమాయ నమః</div>
+                    <div class="grid-item">ఓం సత్యధర్మిణే నమః</div>
+                    <div class="grid-item">ఓం సఖయే నమః</div>
+                    <div class="grid-item">ఓం సరసాంబునిధయే నమః</div>
+                    <div class="grid-item">ఓం మహేశాయ నమః</div>
+                    <div class="grid-item">ఓం దివ్యాంగాయ నమః</div>
+                    <div class="grid-item">ఓం మణికింకిణీ మేఖలాయ నమః</div>
+                    <div class="grid-item">ఓం సమస్తదేవతామూర్తయే నమః</div>
+                    <div class="grid-item">ఓం సహిష్ణవే నమః</div>
+                    <div class="grid-item">ఓం సతతోత్థితాయ నమః</div>
+                    <div class="grid-item">ఓం విఘాతకారిణే నమః</div>
+                    <div class="grid-item">ఓం విశ్వగ్దృశే నమః</div>
+                    <div class="grid-item">ఓం విశ్వరక్షాకృతే నమః</div>
+                    <div class="grid-item">ఓం కల్యాణగురవే నమః</div>
+                    <div class="grid-item">ఓం ఉన్మత్తవేషాయ నమః</div>
+                    <div class="grid-item">ఓం అపరాజితే నమః</div>
+                    <div class="grid-item">ఓం సమస్త జగదాధారాయ నమః</div>
+                    <div class="grid-item">ఓం సర్వైశ్వర్యప్రదాయ నమః</div>
+                    <div class="grid-item">ఓం ఆక్రాంతచిదచిత్ప ప్రభవే నమః</div>
+                    <div class="grid-item">ఓం శ్రీ విఘ్నేశ్వరాయ నమః</div>
+                    <div class="grid-item">ఓం శ్రీ వరసిద్ధి వినాయక స్వామినే నమః</div>
+                </div>
+            </div>
+
+            <!-- Dhupa, Dipa, Naivedyam -->
+            <div class="card">
+                <h2>ధూప, దీప, నైవేద్యాది ఉపచారములు</h2>
+
+                <p><strong>ధూపమ్:</strong></p>
+                <div class="mantra">
+ధూపం దశాంగం గుగ్గులోపేతం సుగంధం సుమనోహరమ్ |
+ఉమాసుత నమస్తుభ్యం గృహాణ వరదో భవ ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - ధూపం ఆఘ్రాపయామి</p>
+
+                <p><strong>దీపమ్:</strong></p>
+                <div class="mantra">
+సాజ్యంచ త్రివర్తిసంయుక్తం వహ్నినా ద్యోతితం మయా |
+గృహాణ మంగళం దీపం ఈశపుత్ర నమోస్తు తే ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - దీపం దర్శయామి</p>
+
+                <p><strong>నైవేద్యమ్:</strong></p>
+                <div class="mantra">
+సుగంధాన్ సుకృతాంశ్చైవ మోదకాన్ ఘృతపాచితాన్ |
+నైవేద్యం గృహ్యతాం దేవ చణముద్గైః ప్రకల్పితాన్ ||
+భక్ష్యం భోజ్యంచ లేహ్యంచ చోష్యం పానీయమేవచ |
+ఇదం గృహాణ నైవేద్యం మయాదత్తం వినాయక ||
+                </div>
+                <p style="font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - నైవేద్యం సమర్పయామి</p>
+                <p style="margin: 10px 0; font-weight: 500;">సత్యం త్వర్తేన పరిష్చామి, అమృతమస్తు, అమృతోపస్తరణమసి</p>
+                <div class="mantra">
+ఓం ప్రాణాయ స్వాహా - ఓం అపానాయ స్వాహా - ఓం వ్యానాయ స్వాహా |
+ఓం ఉదానాయ స్వాహా - ఓం సమానాయ స్వాహా ||
+                </div>
+                <p>మధ్యే మధ్యే పానీయం సమర్పయామి - అమృతమస్తు అమృతాపిధానమసి</p>
+                <p>ఉత్తరాపోశనం సమర్పయామి, హస్తౌ ప్రక్షాళనం సమర్పయామి, పాద ప్రక్షాళనం సమర్పయామి, శుద్ధాచమనీయం సమర్పయామి</p>
+
+                <p style="margin-top: 20px;"><strong>తాంబూలమ్:</strong></p>
+                <div class="mantra">
+పూగీఫలై స్సకర్పూరైః నాగవల్లీ దళైర్యుతమ్ |
+ముక్తాచూర్ణ సమాయుక్తం తాంబూలం ప్రతిగృహ్యతామ్ ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - తాంబూలం సమర్పయామి</p>
+
+                <p><strong>నీరాజనమ్:</strong></p>
+                <div class="mantra">
+ఘృతవర్తి సహస్రైశ్చ కర్పూరశకలై స్తథా |
+నీరాజనం మయాదత్తం గృహాణ వరదో భవ ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - నీరాజనం సమర్పయామి</p>
+
+                <h2>దూర్వాయుగ్మ పూజ</h2>
+                <div class="grid-2col">
+                    <div class="grid-item">గణాధిపాయ నమః - దూర్వాయుగ్మం పూజయామి</div>
+                    <div class="grid-item">ఉమాపుత్రాయ నమః - దూర్వాయుగ్మం పూజయామి</div>
+                    <div class="grid-item">ఆఖువాహనాయ నమః - దూర్వాయుగ్మం పూజయామి</div>
+                    <div class="grid-item">వినాయకాయ నమః - దూర్వాయుగ్మం పూజయామి</div>
+                    <div class="grid-item">ఈశపుత్రాయ నమః - దూర్వాయుగ్మం పూజయామి</div>
+                    <div class="grid-item">సర్వసిద్ధి ప్రదాయకాయ నమః - దూర్వాయుగ్మం పూజయామి</div>
+                </div>
+
+                <h2 style="margin-top: 25px;">మంత్రపుష్పమ్ & ప్రదక్షిణ నమస్కారాలు</h2>
+                <div class="mantra">
+కుమారగురవే తుభ్యం అర్పయామి సుమాంజలిమ్ |
+ప్రదక్షిణం కరిష్యామి సతతం మోదకప్రియ ||
+                </div>
+                <p style="font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - సువర్ణ దివ్య మంత్రపుష్పం సమర్పయామి, ఆత్మ ప్రదక్షిణ నమస్కారాన్ సమర్పయామి</p>
+
+                <p style="margin-top: 20px;"><strong>పునరర్ఘ్యమ్:</strong></p>
+                <div class="mantra">
+అర్ఘ్యం గృహాణ హేరంబ సర్వ భద్ర ప్రదాయక |
+గంధ పుష్పాక్షతైర్యుక్తం పాత్రస్థం పాపనాశన ||
+                </div>
+                <p style="font-weight: bold;">శ్రీ మహాగణాధిపతయే నమః - పునరర్ఘ్యం సమర్పయామి</p>
+
+                <p style="margin-top: 15px; color: var(--text-muted);">ఛత్ర చామర గీత నృత్య ఆందోళికా అశ్వారోహణ గజారోహణ సమస్త రాజోపచారాన్ మనసా సమర్పయామి</p>
+
+                <div class="mantra">
+యస్య స్మృత్యా చ నామోక్త్యా తపః పూజా క్రియాదిషు |
+న్యూనం సంపూర్ణతాం యాతి సద్యో వందే తమచ్యుతమ్ ||
+మంత్రహీనం క్రియాహీనం భక్తిహీనం గణాధిప |
+యత్పూజితం మయా దేవ పరిపూర్ణం తదస్తు తే ||
+                </div>
+                <p style="font-weight: bold; color: var(--primary-red);">అనయా యథా శక్తి పూజయా చ భగవాన్ సర్వాత్మకః శ్రీ మహా గణాధిపతి దేవతా సుప్రసన్నః సుప్రీతో వరదో భవతు</p>
+
+                <h2 style="margin-top: 25px;">ఉద్వాసన</h2>
+                <div class="mantra">
+నమస్తే విఘ్న రాజాయ నమస్తే విఘ్ననాశన |
+బ్రాహ్మణేభ్యోభ్యనుజ్ఞాతా గచ్ఛదేవ యథా సుఖమ్ ||
+                </div>
+                <p style="font-weight: bold;">శ్రీ మహా గణాధిపతయే నమః, యథాస్థానం ఉద్వాసయామి; పునరాగమనాయ చ</p>
+
+                <div class="mantra">
+స్వస్తి ప్రజాభ్యః పరిపాలయంతాం న్యాయేన మార్గేణ మహీం మహీశాః |
+గో బ్రాహ్మణేభ్యః శుభమస్తు నిత్యం లోకాః సమస్తా సుఖినో భవంతు ||
+కాలే వర్షతు పర్జన్యః పృథివీ సస్య శాలినీ |
+దేశోయం క్షోభ రహితో బ్రాహ్మణా సంతు నిర్భయాః ||
+అపుత్రాః పుత్రిణః సంతు పుత్రిణః సంతు పౌత్రిణః |
+అధనాః సధనాః సంతు జీవంతు శరదాం శతమ్ ||
+                </div>
+            </div>
+
+            <!-- Vinayaka Vrata Katha Full Story Telugu -->
+            <div class="card story-section">
+                <h2>శ్రీ వినాయక వ్రత కథ</h2>
+                <p>పూర్వం నైమిశారణ్యంలో సూత మహర్షి శౌనకాది మునులకు శ్రీ వినాయక వ్రత మహత్యాన్ని, వినాయకుని జననాన్ని, మరియు భాద్రపద శుద్ధ చతుర్థి నాడు చంద్రదర్శనం వల్ల కలిగే నీలాపనిందల నివారణోపాయాన్ని ఈ క్రింది విధంగా వివరించారు.</p>
+
+                <h3>గజాసుర సంహారము:</h3>
+                <p>పూర్వం గజాసురుడనే రాక్షసుడు పరమశివుని గురించి ఘోరమైన తపస్సు చేశాడు. అతని తపస్సుకు మెచ్చిన పరమశివుడు ప్రత్యక్షమై ఏమి వరం కావాలో కోరుకోమన్నాడు. అప్పుడు గజాసురుడు "స్వామీ! నువ్వు ఎల్లప్పుడూ నా ఉదరంలోనే (కడుపులోనే) నివాసముండాలి" అని కోరుకున్నాడు. భక్తవశంకరుడైన శివుడు అంగీకరించి గజాసురుని కడుపులో ఉండిపోయాడు.</p>
+                <p>కైలాసంలో ఉన్న పార్వతీదేవి తన భర్త ఎంతకీ రాకపోవడంతో ఆందోళన చెంది, శ్రీమహావిష్ణువును ప్రార్థించి సహాయం కోరింది. అంతట విష్ణువు దేవతలతో కలిసి ఒక ఉపాయం ఆలోచించాడు. నందిని గంగిరెద్దుగా అలంకరించి, దేవతలందరూ రకరకాల వాయిద్యాలు చేతపట్టి గజాసురుని నగరానికి వెళ్లారు. అక్కడ విష్ణువు ఆధ్వర్యంలో గంగిరెద్దును అద్భుతంగా ఆడించారు. దానికి ముగ్ధుడైన గజాసురుడు "మీకేమి కావాలో కోరుకోండి, ఇస్తాను" అని అభయమిచ్చాడు. అప్పుడు విష్ణువు "ఈ గంగిరెద్దు శివుని వాహనమైన నంది. దీనికి నీ కడుపులో ఉన్న శివుని చూపించు" అని కోరాడు.</p>
+                <p>వచ్చినది విష్ణువని గ్రహించిన గజాసురుడు తన మరణం తథ్యమని తెలిసి, శివుని ప్రార్థిస్తూ "స్వామీ! నా శిరస్సు ముల్లోకాలలో పూజలందుకోవాలి, నా చర్మాన్ని నీవు వస్త్రంగా ధరించాలి" అని వేడుకున్నాడు. శివుడు అంగీకరించిన తరువాత విష్ణువు సైగ చేయగా నంది తన కొమ్ములతో గజాసురుని కడుపు చీల్చింది. శివుడు బయటకు వచ్చి విష్ణువును స్తుతించగా, విష్ణువు "దుష్టులకు వరాలిచ్చేటప్పుడు విచక్షణ పాటించాలి" అని హితవు చెప్పి వైకుంఠానికి వెళ్లాడు. శివుడు కైలాసానికి తిరుగు ప్రయాణమయ్యాడు.</p>
+
+                <h3>వినాయకుని జననము:</h3>
+                <p>శివుని రాక గురించి తెలుసుకున్న పార్వతీదేవి సంతోషించి, స్నానం చేయడానికి సిద్ధపడింది. స్నానానికి ముందు తన ఒంటి నలుగుపిండితో ఒక బాలుని బొమ్మను చేసి, దానికి ప్రాణప్రతిష్ఠ చేసింది. ఆ అందమైన బాలుడిని గుమ్మం వద్ద కాపలాగా ఉంచి, ఎవరినీ లోపలికి రానివ్వవద్దని ఆదేశించింది.</p>
+                <p>కొంతసేపటికి కైలాసానికి వచ్చిన శివుడు లోపలికి వెళ్లబోగా, ఆ బాలుడు ఆయనను అడ్డుకున్నాడు. శివుడు ఎంత చెప్పినా వినకపోవడంతో తీవ్ర ఆగ్రహానికి లోనై, తన త్రిశూలంతో బాలుని శిరచ్ఛేదం చేసి లోపలికి వెళ్లాడు. పార్వతీదేవి శివునికి స్వాగతం పలికి, గుమ్మం వద్ద ఉన్న కుమారుని విశేషాలు అడిగింది. శివుడు తాను ఆ బాలుని చంపేశానని చెప్పడంతో పార్వతి తీవ్ర దుఃఖంలో మునిగిపోయింది.</p>
+                <p>పార్వతిని ఓదార్చడానికి శివుడు దేవతలను పిలిచి, "ఉత్తరం వైపు తలపెట్టి నిద్రిస్తున్న ఏ ప్రాణి శిరస్సునైనా తీసుకురండి" అని ఆదేశించాడు. దేవతలు వెతకగా గజాసురుని తల లభించింది. ఆ గజశిరస్సును బాలుని ధండానికి అమర్చి ప్రాణం పోశారు. ఆయనకు 'గజాననుడు' అని నామకరణం చేసి, 'అనింద్యుడు' అనే ఎలుకను వాహనంగా ఇచ్చారు.</p>
+
+                <h3>విఘ్నాధిపత్యము:</h3>
+                <p>కొంతకాలానికి శివపార్వతులకు కుమారస్వామి జన్మించాడు. ఒకనాడు దేవతలు, మునులు శివుని వద్దకు వచ్చి "మాకు ఏ విఘ్నమూ కలగకుండా చూసేందుకు ఒక విఘ్నాధిపతిని నియమించండి" అని కోరారు. కుమారస్వామి తాను వేగంగా ప్రయాణించగలనని, కాబట్టి ఆ పదవి తనకే ఇవ్వాలని కోరాడు. గజాననుడు కూడా ఆ పదవిని కోరడంతో శివుడు ఒక పరీక్ష పెట్టాడు.</p>
+                <p>"ఎవరైతే ముల్లోకాలలోని సమస్త పుణ్యనదులలో స్నానం చేసి ముందుగా నా వద్దకు వస్తారో, వారే విఘ్నాధిపతి అవుతారు" అని ప్రకటించాడు. వెంటనే కుమారస్వామి తన నెమలి వాహనమెక్కి వేగంగా బయలుదేరాడు. కానీ మందగమనుడైన గజాననుడు తండ్రి వద్దకు వెళ్లి "తండ్రీ! నేను అంత వేగంగా ప్రయాణించలేను, నాకు తగిన ఉపాయం చెప్పండి" అని వేడుకున్నాడు.</p>
+                <p>శివుడు ప్రీతుడై "నారాయణ మంత్రం జపిస్తూ తల్లిదండ్రులకు ప్రదక్షిణం చేస్తే సమస్త లోకాలలోని నదులలో స్నానం చేసిన ఫలం లభిస్తుంది" అని నారాయణ మంత్రాన్ని ఉపదేశించాడు. గజాననుడు భక్తితో తల్లిదండ్రులైన శివపార్వతులకు ప్రదక్షిణం చేశాడు. ఆ ప్రభావం వల్ల కుమారస్వామి ఏ పుణ్యనదికి వెళ్లినా, అక్కడ అప్పటికే గజాననుడు స్నానం చేసి రావడం కనిపించింది.</p>
+                <p>కుమారస్వామి కైలాసానికి తిరిగి వచ్చి తన అన్నగారి మహిమను గుర్తించి, ఆయనకే విఘ్నాధిపత్యం ఇవ్వడానికి సమ్మతించాడు. భాద్రపద శుద్ధ చతుర్థి నాడు గజాననునికి 'విఘ్నేశ్వరుడు'గా పట్టాభిషేకం చేశారు. దేవతలు, భక్తులు విఘ్నేశ్వరునికి కుడుములు, ఉండ్రాళ్లు, పండ్లు, లడ్డూలు నైవేద్యంగా సమర్పించారు.</p>
+
+                <h3>చంద్ర శాపము:</h3>
+                <p>భోజనప్రియుడైన విఘ్నేశ్వరుడు భక్తులర్పించిన నైవేద్యాలన్నీ ఆరగించి, కడుపు నిండినవాడై తల్లిదండ్రులకు నమస్కరించడానికి ప్రయత్నించాడు. ఆయన పెద్ద కడుపుతో సాష్టాంగ నమస్కారం చేయడానికి ఇబ్బందిపడుతుండటం చూసి, శివుని శిరస్సుపై ఉన్న చంద్రుడు గేలి చేస్తూ నవ్వాడు. దాంతో విఘ్నేశ్వరుని కడుపు పగిలి రంధ్రమయింది.</p>
+                <p>ఆ దృశ్యాన్ని చూసి తీవ్ర ఆగ్రహం చెందిన పార్వతీదేవి "ఓ చంద్రుడా! గర్వంతో నా కుమారుడిని చూసి నవ్వినందుకు, భాద్రపద శుద్ధ చతుర్థి నాడు నిన్ను చూసినవారు నీలాపనిందల (చేయని నేరానికి నిందలు) పాలవుదురు గాక!" అని శాపమిచ్చింది.</p>
+                <p>దాంతో లోకాలలోని ప్రజలు చవితి నాడు చంద్రుడిని చూడటానికి భయపడటం ప్రారంభించారు. దేవతల ప్రార్థన మన్నించి శాప తీవ్రతను తగ్గిస్తూ, "చవితి నాడు వినాయకుని పూజించి, ఈ కథను విని, అక్షతలు శిరస్సుపై ధరించిన వారికి చంద్రదర్శన దోషం ఉండదు" అని పార్వతీదేవి అభయమిచ్చింది.</p>
+
+                <h3>శ్యమంతకోపాఖ్యానం:</h3>
+                <p>ద్వాపరయుగంలో ఒకనాడు నారద మహర్షి ద్వారకకు వచ్చి శ్రీకృష్ణుడితో వినాయక చవితి విశేషాలను, చంద్ర శాపాన్ని గురించి చెప్పి వెళ్లాడు. ఆ రాత్రి కృష్ణుడు పాలు పితుకుతూ, పాలలో చంద్రుని ప్రతిబింబాన్ని పొరపాటున చూశాడు. దాంతో తనకు ఏ నీలాపనింద వస్తుందోనని వేచి చూశాడు.</p>
+                <p>కొద్దిరోజులకు సత్రాజిత్తు అనే యాదవ రాజు సూర్యభగవానుని మెప్పించి 'శ్యమంతకమణి'ని పొందాడు. ఆ మణి రోజూ ఎనిమిది బారువుల బంగారాన్ని ఇస్తుంది. శ్రీకృష్ణుడు ఆ మణిని రాజ్య సంక్షేమం కోసం రాజుకివ్వమని అడగ్గా సత్రాజిత్తు నిరాకరించాడు.</p>
+                <p>ఒకరోజు సత్రాజిత్తు సోదరుడైన ప్రసేనుడు ఆ శ్యమంతకమణిని మెడలో వేసుకుని వేటకు వెళ్లాడు. అడవిలో ఒక సింహం ఆ మణిని మాంసం ముక్క అనుకుని ప్రసేనుడిని చంపి మణిని తీసుకుపోయింది. ఆపై జాంబవంతుడు అనే ఎలుగుబంట్ల రాజు ఆ సింహాన్ని చంపి, మణిని తన గుహకు తీసుకెళ్లి తన కూతురైన జాంబవతి ఉయ్యాలకు కట్టాడు.</p>
+                <p>ప్రసేనుడు తిరిగి రాకపోవడంతో సత్రాజిత్తు "శ్రీకృష్ణుడే నా తమ్ముడిని చంపి శ్యమంతకమణిని అపహరించాడు" అని నిందించాడు. చవితి నాడు చంద్రుడిని చూసినందుకే ఈ నింద వచ్చిందని గ్రహించిన శ్రీకృష్ణుడు, తనపై పడిన నిందను పోగొట్టుకోవడానికి సైన్యంతో అడవికి వెళ్లాడు.</p>
+                <p>అక్కడ ప్రసేనుని, సింహము యొక్క మృతదేహాలను చూస్తూ, చివరికి జాంబవంతుని గుహకు చేరుకున్నాడు. గుహలో ఉయ్యాలకు కట్టి ఉన్న మణిని తీసుకోబోగా, అక్కడ ఉన్న పసిపాప ఏడవడంతో జాంబవంతుడు వచ్చి కృష్ణునితో యుద్ధానికి దిగాడు. వారిద్దరి మధ్య continuous గా 28 రోజులు ఘోర యుద్ధం జరిగింది.</p>
+                <p>చివరకు జాంబవంతుడు అలసిపోయి, తనతో యుద్ధం చేస్తున్నది త్రేతాయుగంలో తనకు అభయమిచ్చిన శ్రీరాముడేనని గ్రహించాడు. వెంటనే కృష్ణునికి నమస్కరించి, శ్యమంతకమణితో పాటు తన కుమార్తె జాంబవతిని ఇచ్చి వివాహం చేశాడు.</p>
+                <p>శ్రీకృష్ణుడు ద్వారకకు తిరిగి వచ్చి సత్రాజిత్తును పిలిపించి సభ మధ్యలో శ్యమంతకమణిని అప్పగించి జరిగిందంతా వివరించాడు. సత్రాజిత్తు తన తప్పు తెలుసుకుని పశ్చాత్తాపపడి, శ్యమంతకమణితో పాటు తన కుమార్తె సత్యభామను కృష్ణునికి ఇచ్చి వివాహం జరిపించాడు. కానీ కృష్ణుడు మణిని నిరాకరించి సత్యభామను స్వీకరించాడు.</p>
+                <p>అప్పుడు దేవతలు, మహర్షులు శ్రీకృష్ణుడిని ప్రార్థించగా, ఆయన "ఎవరైతే భాద్రపద శుద్ధ చవితి నాడు వినాయకుని పూజించి, ఈ వ్రతకథను భక్తితో విని, పూజ అక్షతలను శిరస్సున ధరిస్తారో, వారికి పొరపాటున చంద్రదర్శనం అయినా ఎలాంటి నీలాపనిందలు కలగవు" అని వరమిచ్చాడు.</p>
+            </div>
+        </div>
+    </div>
+    <!-- TELUGU CONTENT END -->
+
+    <!-- ENGLISH CONTENT START -->
+    <div id="english-content" class="lang-content">
+        <header>
+            <h1>Sri Vinayaka Puja Vidhanam</h1>
+            <p>Vrata Katha & Shodashopachara Rituals</p>
+        </header>
+
+        <div class="container">
+            <!-- Initial Mantras & Sankalpam -->
+            <div class="card">
+                <div class="mantra">
+Shuklambaradharam Vishnum Shashivarnam Chaturbhujam |
+Prasanna Vadanam Dhyayet Sarva Vighnopashantaye ||
+                </div>
+
+                <h2>Sankalpam (Solemn Vow)</h2>
+                <p style="font-size: 1.05rem;">
+                    For the destruction of all my sins, to please Lord Sri Varasiddhi Vinayaka, in this auspicious time, in the presence of all deities, Brahmins, Lord Shiva, Lord Vishnu, and Guru, for the welfare, victory, courage, health, longevity, and prosperity of our family, for the attainment of the fourfold goals of life (Dharma, Artha, Kama, Moksha), for abundance of wealth and food, for the fulfillment of all noble desires, for world peace, and for the removal of all obstacles, I perform the 16-step (Shodashopachara) worship of Lord Varasiddhi Vinayaka to the best of my ability.
+                </p>
+
+                <div class="mantra">
+Ringing the bell:
+Agamartham Tu Devanam Gamanartham Tu Rakshasam |
+Kuru Ghantaravam Tatra Devatahvana Lanchanam ||
+                </div>
+
+                <h2>Kalasha Aradhana (Sanctification of Water)</h2>
+                <div class="mantra">
+Kalashasya Mukhe Vishnu Kante Rudra Samashritah |
+Mule Tatra Sthito Brahma Madhye Matruganah Smrutah ||
+Kukshau Tu Sagara Sarve Sapta Dveepa Vasundhara |
+Rigvedo Atha Yajurveda Samavedo Hyatharvanah ||
+Angaishcha Sahita Sarve Kalashambu Samashritah |
+Gange Cha Yamune Chaiva Godavari Saraswati |
+Narmade Sindhu Kaveri Jalesmin Sannidhim Kuru ||
+                </div>
+                <p style="font-weight: bold; color: var(--saffron);">Sprinkle this holy water on worship materials and yourself.</p>
+            </div>
+
+            <!-- Ganapati Puja & Shodashopachara -->
+            <div class="card">
+                <h2>Ganapati Puja</h2>
+                <p style="margin-bottom: 15px; font-weight: bold;">Initial prayer to Lord Ganesha for obstacle-free completion:</p>
+
+                <div class="mantra">
+Vakratunda Mahakaya Kotisurya Samaprabha |
+Nirvighnam Kuru Me Deva Sarvakaryeshu Sarvada ||
+
+Sumukhashchaikadantashcha Kapilo Gajakarnakah |
+Lambodarashcha Vikato Vighnarajo Ganadhipah ||
+Dhumaketur Ganadhyakshah Bhalachandro Ganananah |
+Vakratundah Shurpakarno Herambah Skandapurvajah ||
+Shodashaitani Namani Yah Pathechhrunuyadapi |
+Vidyarambhe Vivahe Cha Praveshe Nirgame Tatha |
+Sangrame Sarvakaryeshu Vighnastasya Na Jayate ||
+                </div>
+
+                <h2>Shodashopachara Puja (16-Step Worship)</h2>
+                <p><strong>1. Dhyanam (Meditation):</strong></p>
+                <div class="mantra">
+Bhavasanchita Papaugha Vidhvamsana Vichakshanam |
+Vighnandhakara Bhasvantam Vighnaraja Maham Bhaje ||
+Ekadantam Shurpakarnam Gajavaktram Chaturbhujam |
+Pashankusha Dharam Devam Dhyaayet Siddhivinayakam ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">Om Sri Mahaganadhipataye Namah - Dhyayami (I meditate on Lord Ganesha)</p>
+
+                <p><strong>2. Avahanam (Invocation):</strong></p>
+                <div class="mantra">
+Atragachha Jagadvandya Surarajarchiteshvara |
+Anathanatha Sarvajna Gaurigarbha Samudbhava ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">Om Sri Mahaganadhipataye Namah - Avahayami (I invoke Lord Ganesha)</p>
+
+                <p><strong>3. Aasanam (Offering Seat):</strong></p>
+                <div class="mantra">
+Mautikaih Pushyaragaishcha Nanaratnairvirajitam |
+Ratna Simhasanam Charu Preetyartham Pratigruhyatam ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">Om Sri Mahaganadhipataye Namah - Aasanam Samarpayami</p>
+
+                <p><strong>4. Paadyam (Washing Feet):</strong></p>
+                <div class="mantra">
+Gajavaktra Namastestu Sarvabheeshtapradayaka |
+Bhaktya Paadyam Mayadattam Gruhana Dviradana ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">Om Sri Mahaganadhipataye Namah - Paadyam Samarpayami</p>
+
+                <p><strong>5. Arghyam (Offering Water for Washing Hands):</strong></p>
+                <div class="mantra">
+Gauriputra Namastestu Shankarapriya Nandana |
+Gruhanarghyam Mayadattam Gandhapushpakshatairyutam ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">Om Sri Mahaganadhipataye Namah - Arghyam Samarpayami</p>
+
+                <p><strong>6. Aachamaniyam (Water for Sipping):</strong></p>
+                <div class="mantra">
+Anathanatha Sarvajna Geervana Gana Poojita |
+Gruhanachamanam Deva Tubhyam Dattam Maya Prabho ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">Om Sri Mahaganadhipataye Namah - Aachamaniyam Samarpayami</p>
+
+                <p><strong>7. Madhuparkam (Offering Honey and Yogurt Mix):</strong></p>
+                <div class="mantra">
+Dadhiksheera Samayuktam Madhvajyena Samanvitam |
+Madhuparkam Gruhanedam Gajavaktra Namostu Te ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">Om Sri Mahaganadhipataye Namah - Madhuparkam Samarpayami</p>
+
+                <p><strong>8. Snanam (Holy Bath):</strong></p>
+                <div class="mantra">
+Snanam Panchamritairdeva Gruhana Gananayaka |
+Anathanatha Sarvajna Geervana Ganapoojita ||
+                </div>
+                <p style="font-weight: bold;">Om Sri Mahaganadhipataye Namah - Panchamrita Snanam Samarpayami</p>
+                <div class="mantra">
+Gangadi Sarvateerthebhya Aahritai Ramalaijrulaih |
+Snanam Kurushva Bhagavan Umaputra Namostu Te ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">Om Sri Mahaganadhipataye Namah - Shuddhodaka Snanam Samarpayami</p>
+
+                <p><strong>9. Vastram (Offering Garments):</strong></p>
+                <div class="mantra">
+Raktavastradvayam Charu Devayogyam Cha Mangalam |
+Shubhapradam Gruhana Tvam Lambodara Haratmaja ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">Om Sri Mahaganadhipataye Namah - Vastra Yugmam Samarpayami</p>
+
+                <p><strong>10. Yajnopaveetam (Sacred Thread):</strong></p>
+                <div class="mantra">
+Rajitam Brahmasootram Kanchanchottareeyakam |
+Gruhana Deva Sarvajna Bhaktana Mishtadayaka ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">Om Sri Mahaganadhipataye Namah - Yajnopaveetam Samarpayami</p>
+
+                <p><strong>11. Gandham (Offering Sandal Paste):</strong></p>
+                <div class="mantra">
+Chandanagarukarpura Kasturi KumkumAnvitam |
+Vilepanam Surashreshtha Preetyartham Pratigruhyatam ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">Om Sri Mahaganadhipataye Namah - Gandham Samarpayami</p>
+
+                <p><strong>12. Pushpam & Akshata (Offering Flowers & Sacred Rice):</strong></p>
+                <div class="mantra">
+Akshatan Dhavalan Divyan Shaleeyamstandulan Shubhan |
+Gruhana Paramananda Shambhuputra Namostu Te ||
+                </div>
+                <p style="font-weight: bold;">Om Sri Mahaganadhipataye Namah - Akshatan Samarpayami</p>
+                <div class="mantra">
+Sugandhani Supushpani Jajeekundamukhani Cha |
+Ekavimshati Patrani Sangruhana Namostu Te ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">Om Sri Mahaganadhipataye Namah - Pushpani Samarpayami</p>
+            </div>
+
+            <!-- Anga Puja -->
+            <div class="card">
+                <h2>Anga Puja (Worship of Limbs)</h2>
+                <div class="grid-2col">
+                    <div class="grid-item">Om Ganeshaya Namah - Feet</div>
+                    <div class="grid-item">Om Ekadantaya Namah - Knees</div>
+                    <div class="grid-item">Om Vighnarajaya Namah - Shins</div>
+                    <div class="grid-item">Om Aakhubahanaya Namah - Thighs</div>
+                    <div class="grid-item">Om Herambaya Namah - Waist</div>
+                    <div class="grid-item">Om Lambodaraya Namah - Abdomen</div>
+                    <div class="grid-item">Om Gananathaya Namah - Navel</div>
+                    <div class="grid-item">Om Ganeshaya Namah - Heart</div>
+                    <div class="grid-item">Om Sthulakanthaya Namah - Neck</div>
+                    <div class="grid-item">Om Skandagrajaya Namah - Shoulders</div>
+                    <div class="grid-item">Om Pashahastaya Namah - Hands</div>
+                    <div class="grid-item">Om Gajavktraya Namah - Face</div>
+                    <div class="grid-item">Om Vighnahantre Namah - Eyes</div>
+                    <div class="grid-item">Om Shurpakarnaya Namah - Ears</div>
+                    <div class="grid-item">Om Bhalachandraya Namah - Forehead</div>
+                    <div class="grid-item">Om Sarveshvaraya Namah - Head</div>
+                    <div class="grid-item">Om Vighnarajaya Namah - All Limbs</div>
+                </div>
+            </div>
+
+            <!-- Ekavimsati Patra Puja -->
+            <div class="card">
+                <h2>Ekavimsati Patra Puja (21 Leaves Offering)</h2>
+                <div class="grid-2col">
+                    <div class="grid-item">1. Om Sumukhaya Namah - Machi Leaf</div>
+                    <div class="grid-item">2. Om Ganadhipaya Namah - Brihati Leaf</div>
+                    <div class="grid-item">3. Om Umaputraya Namah - Bilva Leaf</div>
+                    <div class="grid-item">4. Om Gajananaya Namah - Durva Grass</div>
+                    <div class="grid-item">5. Om Harasunave Namah - Dhatura Leaf</div>
+                    <div class="grid-item">6. Om Lambodaraya Namah - Badari Leaf</div>
+                    <div class="grid-item">7. Om Guhagrajaya Namah - Apamarga Leaf</div>
+                    <div class="grid-item">8. Om Gajakarnaya Namah - Tulsi Leaf</div>
+                    <div class="grid-item">9. Om Ekadantaya Namah - Mango Leaf</div>
+                    <div class="grid-item">10. Om Vikataya Namah - Karaveera Leaf</div>
+                    <div class="grid-item">11. Om Bhinnadantaya Namah - Vishnukranta Leaf</div>
+                    <div class="grid-item">12. Om Vatave Namah - Pomegranate Leaf</div>
+                    <div class="grid-item">13. Om Sarveshvaraya Namah - Devadaru Leaf</div>
+                    <div class="grid-item">14. Om Bhalachandraya Namah - Maruvaka Leaf</div>
+                    <div class="grid-item">15. Om Herambaya Namah - Sindhuvara Leaf</div>
+                    <div class="grid-item">16. Om Shurpakarnaya Namah - Jasmine Leaf</div>
+                    <div class="grid-item">17. Om Suragrajaya Namah - Gandaki Leaf</div>
+                    <div class="grid-item">18. Om Ibhavktraya Namah - Shami Leaf</div>
+                    <div class="grid-item">19. Om Vinayakaya Namah - Peepal Leaf</div>
+                    <div class="grid-item">20. Om Surasevitaya Namah - Arjuna Leaf</div>
+                    <div class="grid-item">21. Om Kapilaya Namah - Arka Leaf</div>
+                </div>
+            </div>
+
+            <!-- Ashtottara Shatanamavali -->
+            <div class="card">
+                <h2>Sri Vinayaka Ashtottara Shatanamavali (108 Names)</h2>
+                <div class="grid-2col" style="font-size:0.95rem;">
+                    <div class="grid-item">Om Gajananaya Namah</div>
+                    <div class="grid-item">Om Ganadhyakshaya Namah</div>
+                    <div class="grid-item">Om Vighnarajaya Namah</div>
+                    <div class="grid-item">Om Vinayakaya Namah</div>
+                    <div class="grid-item">Om Dvaimaturaya Namah</div>
+                    <div class="grid-item">Om Dvimukhaya Namah</div>
+                    <div class="grid-item">Om Pramukhaya Namah</div>
+                    <div class="grid-item">Om Sumukhaya Namah</div>
+                    <div class="grid-item">Om Kritine Namah</div>
+                    <div class="grid-item">Om Supradeepaya Namah</div>
+                    <div class="grid-item">Om Sukhanidhaye Namah</div>
+                    <div class="grid-item">Om Suradhyakshaya Namah</div>
+                    <div class="grid-item">Om Surarighnaya Namah</div>
+                    <div class="grid-item">Om Mahaganapataye Namah</div>
+                    <div class="grid-item">Om Manyaya Namah</div>
+                    <div class="grid-item">Om Mahakalaya Namah</div>
+                    <div class="grid-item">Om Mahabalaya Namah</div>
+                    <div class="grid-item">Om Herambaya Namah</div>
+                    <div class="grid-item">Om Lambajatharaya Namah</div>
+                    <div class="grid-item">Om Hrasvagreevaya Namah</div>
+                    <div class="grid-item">Om Mahodaraya Namah</div>
+                    <div class="grid-item">Om Madotkataya Namah</div>
+                    <div class="grid-item">Om Mahaveeraya Namah</div>
+                    <div class="grid-item">Om Mantrine Namah</div>
+                    <div class="grid-item">Om Mangala Susvaraya Namah</div>
+                    <div class="grid-item">Om Pramathaya Namah</div>
+                    <div class="grid-item">Om Prathamaya Namah</div>
+                    <div class="grid-item">Om Prajnaya Namah</div>
+                    <div class="grid-item">Om Vighnakartre Namah</div>
+                    <div class="grid-item">Om Vighnahantre Namah</div>
+                    <div class="grid-item">Om Vishvanetre Namah</div>
+                    <div class="grid-item">Om Viratpataye Namah</div>
+                    <div class="grid-item">Om Shreepataye Namah</div>
+                    <div class="grid-item">Om Vakpataye Namah</div>
+                    <div class="grid-item">Om Shringarine Namah</div>
+                    <div class="grid-item">Om Aashritavatsalaya Namah</div>
+                    <div class="grid-item">Om Shivapriyaya Namah</div>
+                    <div class="grid-item">Om Sheeghrakarine Namah</div>
+                    <div class="grid-item">Om Bhaktajeevitaya Namah</div>
+                    <div class="grid-item">Om Shashvataya Namah</div>
+                    <div class="grid-item">Om Jitamanmathaya Namah</div>
+                    <div class="grid-item">Om Bhavatmajaya Namah</div>
+                    <div class="grid-item">Om Aishwarya Karanaya Namah</div>
+                    <div class="grid-item">Om Balotthitaya Namah</div>
+                    <div class="grid-item">Om Jyayase Namah</div>
+                    <div class="grid-item">Om Yakshakinnarasevitaya Namah</div>
+                    <div class="grid-item">Om Puranapurushaya Namah</div>
+                    <div class="grid-item">Om Gangasutaya Namah</div>
+                    <div class="grid-item">Om Pushne Namah</div>
+                    <div class="grid-item">Om Ganadheeshaya Namah</div>
+                    <div class="grid-item">Om Pushkarokshiptavari Namah</div>
+                    <div class="grid-item">Om Gambheeraninadaya Namah</div>
+                    <div class="grid-item">Om Agragamine Namah</div>
+                    <div class="grid-item">Om Agrapoojyaya Namah</div>
+                    <div class="grid-item">Om Netrakrite Namah</div>
+                    <div class="grid-item">Om Chameekaraprabhaya Namah</div>
+                    <div class="grid-item">Om Sarvaya Namah</div>
+                    <div class="grid-item">Om Sarvopasyaya Namah</div>
+                    <div class="grid-item">Om Sarvakartre Namah</div>
+                    <div class="grid-item">Om Sarvanetre Namah</div>
+                    <div class="grid-item">Om Sarvasiddhipradaya Namah</div>
+                    <div class="grid-item">Om Sarvasiddhaye Namah</div>
+                    <div class="grid-item">Om Panchahastaya Namah</div>
+                    <div class="grid-item">Om Parvatinandanaya Namah</div>
+                    <div class="grid-item">Om Prabhave Namah</div>
+                    <div class="grid-item">Om Kumaragurave Namah</div>
+                    <div class="grid-item">Om Akshobhyaya Namah</div>
+                    <div class="grid-item">Om Kunjarasurabhanjanaya Namah</div>
+                    <div class="grid-item">Om Pramodaya Namah</div>
+                    <div class="grid-item">Om Modakapriyaya Namah</div>
+                    <div class="grid-item">Om Kantimate Namah</div>
+                    <div class="grid-item">Om Dhritimate Namah</div>
+                    <div class="grid-item">Om Kamine Namah</div>
+                    <div class="grid-item">Om Kapitthavanapriyaya Namah</div>
+                    <div class="grid-item">Om Brahmacharine Namah</div>
+                    <div class="grid-item">Om Brahmarupine Namah</div>
+                    <div class="grid-item">Om Brahmavidyadi Danabhuve Namah</div>
+                    <div class="grid-item">Om Jishnave Namah</div>
+                    <div class="grid-item">Om Vishnupriyaya Namah</div>
+                    <div class="grid-item">Om Vatave Namah</div>
+                    <div class="grid-item">Om Abheeshtavaradaya Namah</div>
+                    <div class="grid-item">Om Jyotishe Namah</div>
+                    <div class="grid-item">Om Bhaktanidhaye Namah</div>
+                    <div class="grid-item">Om Bhavagamyaya Namah</div>
+                    <div class="grid-item">Om Mangalapradaya Namah</div>
+                    <div class="grid-item">Om Avyaktaya Namah</div>
+                    <div class="grid-item">Om Aprakritaparakramaya Namah</div>
+                    <div class="grid-item">Om Satyadharmine Namah</div>
+                    <div class="grid-item">Om Sakhaye Namah</div>
+                    <div class="grid-item">Om Sarasambunidhaye Namah</div>
+                    <div class="grid-item">Om Maheshaya Namah</div>
+                    <div class="grid-item">Om Divyangaya Namah</div>
+                    <div class="grid-item">Om Manikinkini Mekhalaya Namah</div>
+                    <div class="grid-item">Om Samastadevatamurtaye Namah</div>
+                    <div class="grid-item">Om Sahishnave Namah</div>
+                    <div class="grid-item">Om Satatotthitaya Namah</div>
+                    <div class="grid-item">Om Vighatakarine Namah</div>
+                    <div class="grid-item">Om Vishvagdrishe Namah</div>
+                    <div class="grid-item">Om Vishvarakshakrite Namah</div>
+                    <div class="grid-item">Om Kalyanagurave Namah</div>
+                    <div class="grid-item">Om Unmatta Veshaya Namah</div>
+                    <div class="grid-item">Om Aparajitaya Namah</div>
+                    <div class="grid-item">Om Samasta Jagadadharaya Namah</div>
+                    <div class="grid-item">Om Sarvaishwarya Pradayakaya Namah</div>
+                    <div class="grid-item">Om Aakranta Chidachit Prabhave Namah</div>
+                    <div class="grid-item">Om Sri Vighneshvaraya Namah</div>
+                    <div class="grid-item">Om Sri Varasiddhi Vinayaka Swamine Namah</div>
+                </div>
+            </div>
+
+            <!-- Dhupa, Dipa, Naivedyam in English -->
+            <div class="card">
+                <h2>Dhupa, Dipa, Naivedyam & Concluding Rituals</h2>
+
+                <p><strong>13. Dhoopam (Incense):</strong></p>
+                <div class="mantra">
+Dhoopam Dashangam Guggulopetam Sugandham Sumanoharam |
+Umasuta Namastubhyam Gruhana Varado Bhava ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">Om Sri Mahaganadhipataye Namah - Dhoopam Aaghrapayami</p>
+
+                <p><strong>14. Deepam (Lamp Offering):</strong></p>
+                <div class="mantra">
+Saajyancha Trivartisamyuktam Vahnina Dyotitam Maya |
+Gruhana Mangalam Deepam Eeshaputra Namostu Te ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">Om Sri Mahaganadhipataye Namah - Deepam Darshayami</p>
+
+                <p><strong>15. Naivedyam (Food Offering):</strong></p>
+                <div class="mantra">
+Sugandhan Sukritamshchaiva Modakan Ghritapachitan |
+Naivedyam Gruhyatam Deva Chanamudgaih Prakalpitan ||
+Bhakshyam Bhojyancha Lehyancha Choshyam Paneeyamevacha |
+Idam Gruhana Naivedyam Mayadattam Vinayaka ||
+                </div>
+                <p style="font-weight: bold;">Om Sri Mahaganadhipataye Namah - Naivedyam Samarpayami</p>
+                <div class="mantra">
+Om Pranaya Swaha - Om Apanaya Swaha - Om Vyanaya Swaha |
+Om Udanaya Swaha - Om Samanaya Swaha ||
+                </div>
+
+                <p style="margin-top: 20px;"><strong>16. Tamboolam & Neerajanam (Betel Leaves & Aarthi):</strong></p>
+                <div class="mantra">
+Ghruta Varti Sahasraishcha Karpura Shakalai Statha |
+Neerajanam Maya Dattam Gruhana Varado Bhava ||
+                </div>
+                <p style="margin-bottom: 15px; font-weight: bold;">Om Sri Mahaganadhipataye Namah - Neerajanam Samarpayami</p>
+
+                <h2>Mantra Pushpam & Circumambulation</h2>
+                <div class="mantra">
+Kumaragurave Tubhyam Arpayami Sumanjalim |
+Pradakshinam Karishyami Satatam Modakapriya ||
+                </div>
+                <p style="font-weight: bold;">Om Sri Mahaganadhipataye Namah - Mantra Pushpam & Pradakshina Samarpayami</p>
+
+                <h2>Udvasana (Farewell Prayer)</h2>
+                <div class="mantra">
+Namaste Vighnarajaya Namaste Vighnanashana |
+Brahmanebhyobhyanujnata Gachhadeva Yatha Sukham ||
+                </div>
+                <p style="font-weight: bold;">Om Sri Mahaganadhipataye Namah - Udvasayami (I respectfully pray for your return again)</p>
+            </div>
+
+            <!-- Vinayaka Vrata Katha Full Story English -->
+            <div class="card story-section">
+                <h2>Sri Vinayaka Vrata Katha (The Holy Legend)</h2>
+                <p>In the ancient forest of Naimisharanya, Maharshi Suta narrated the greatness of Vinayaka Vrata, the divine birth of Lord Ganesha, and the remedy for the false accusations caused by looking at the Moon on Bhadrapada Shuddha Chaturthi to Sage Shaunaka and other ascetics as follows:</p>
+
+                <h3>Slaying of Gajasura:</h3>
+                <p>Long ago, a demon named Gajasura performed severe penance towards Lord Shiva. Pleased with his devotion, Lord Shiva appeared and asked him to name his desire. Gajasura requested, "O Lord, you must eternally reside inside my belly." Shiva, bound by his devotee's wish, entered Gajasura's belly and remained there.</p>
+                <p>Distressed by Shiva's prolonged absence, Goddess Parvati prayed to Lord Vishnu for help. Vishnu devised a plan. He decorated Nandi as a performing bull (Gangireddu) and, accompanied by the demigods playing instruments, reached Gajasura's kingdom. Captivated by the performance, Gajasura offered them any boon. Vishnu asked, "This bull is Nandi, Shiva's mount. Reveal Lord Shiva who is inside your belly."</p>
+                <p>Realizing the traveler was Lord Vishnu, Gajasura accepted his fate and prayed to Shiva: "May my head be worshipped across the three worlds, and may you wear my skin as your garment." After Shiva agreed, Nandi tore open Gajasura's belly with its horns. Shiva emerged, praised Vishnu, and returned to Kailasha.</p>
+
+                <h3>Birth of Ganesha:</h3>
+                <p>Upon hearing news of Shiva's return, Goddess Parvati prepared for a holy bath. Before bathing, she created a figure of a young boy using turmeric paste from her body and breathed life into it. She asked the handsome boy to guard the entrance and strictly deny entry to anyone.</p>
+                <p>When Lord Shiva arrived, the boy stopped him. Enraged by the boy's defiance, Shiva severed his head with his Trident and went inside. When Parvati enquired about the boy at the gate, Shiva revealed what had happened. Overcome with grief, Parvati wept for her son.</p>
+                <p>To console her, Shiva instructed his attendants to fetch the head of any living creature sleeping with its head facing North. They found the head of Gajasura. Shiva attached the elephant head to the boy's torso and restored his life, naming him 'Gajanana' and gifting him a rat named 'Anindya' as his vehicle.</p>
+
+                <h3>Attainment of Vighnadhipatyam:</h3>
+                <p>Later, Lord Subramanya (Kartikeya) was born to Shiva and Parvati. One day, the Devas requested Shiva to appoint a commander (Vighnadhipati) to prevent obstacles in their endeavors. Kartikeya claimed the position due to his swiftness, while Gajanana also requested the role. Shiva set a test for both brothers.</p>
+
+                <p>"Whoever bathes in all the holy rivers across the three worlds and returns first shall be crowned as Vighnadhipati," announced Lord Shiva. Kartikeya immediately mounted his peacock and sped away. Gajanana, knowing he could not travel fast on his rat, approached his father for guidance.</p>
+                <p>Pleased with his humility, Shiva taught him the sacred Narayana Mantra and explained that circumambulating one's parents while chanting it bestows the merit of bathing in all holy rivers. Gajanana devoutly circumambulated Shiva and Parvati. Due to the mantra's power, wherever Kartikeya went, he saw Gajanana already finishing his bath before him.</p>
+
+                <p>Acknowledging his brother's divine wisdom, Kartikeya conceded the position. On Bhadrapada Shuddha Chaturthi, Gajanana was crowned as 'Vighneshwara'. Devas and devotees offered him sweets like Kudumulu, Undrallu, fruits, and Laddu.</p>
+
+                <h3>Curse of the Moon God:</h3>
+                <p>After consuming the heavy feast offered by devotees, Vighneshwara struggled to bow down to his parents due to his large belly. Seeing his struggle, Chandra (the Moon God), standing on Shiva's crown, laughed mockingly out of arrogance. This caused Ganesha's stomach to burst open.</p>
+
+                <p>Furious at Chandra's insolence, Goddess Parvati cursed him: "O Chandra! Whoever looks at you on Bhadrapada Shuddha Chaturthi shall suffer untruthful accusations (Neelapanindalu) and disgrace!"</p>
+                <p>Fearing the curse, people stopped looking at the moon on Chaturthi. Relenting to the prayers of the Devas, Parvati mitigated the curse, stating: "Anyone who worships Lord Vinayaka on Chaturthi, listens to this sacred story, and places consecrated rice (Akshata) on their head shall be freed from the Moon's curse."</p>
+
+                <h3>The Legend of Shyamantaka Jewel:</h3>
+                <p>In the Dvapara Yuga, Sage Narada visited Lord Krishna in Dwaraka and reminded him of the Moon's curse. Later that night, while milking cows, Krishna accidentally saw the reflection of the Moon in the milk and prepared for an inevitable false accusation.</p>
+
+                <p>Sometime later, a king named Satrajit received the miraculous 'Shyamantaka Jewel' from Sun God, which yielded large amounts of gold daily. Krishna suggested giving the jewel to the kingdom for public welfare, but Satrajit refused.</p>
+
+                <p>One day, Satrajit's brother Prasena wore the jewel and went hunting in the forest. A lion killed Prasena mistaking the gem for meat and took it away. Later, Jambavan, the legendary bear king, killed the lion, took the gem to his cave, and hung it over his daughter Jambavati's cradle.</p>
+
+                <p>When Prasena did not return, Satrajit falsely accused Krishna of murdering his brother for the jewel. Realizing this was the effect of sighting the Moon on Chaturthi, Krishna went into the forest with an army to clear his name.</p>
+
+                <p>Krishna tracked down the remains of Prasena and the lion, eventually entering Jambavan's cave. When Krishna reached for the gem, Jambavan challenged him to a duel. They fought continuously for 28 days.</p>
+
+                <p>Exhausted, Jambavan realized that his opponent was none other than Lord Rama of Treta Yuga. Bowing in reverence, Jambavan offered the Shyamantaka jewel along with his daughter Jambavati in marriage to Lord Krishna.</p>
+
+                <p>Krishna returned to Dwaraka, summoned Satrajit to the royal assembly, and returned the jewel, narrating the truth. Realizing his grave mistake, a remorseful Satrajit offered the jewel and his daughter Satyabhama in marriage to Krishna. Krishna married Satyabhama but returned the jewel to Satrajit.</p>
+
+                <p>When gods and sages prayed to Lord Krishna, he declared: "Whoever worships Vinayaka on Bhadrapada Shuddha Chaturthi, listens to this Vrata Katha with devotion, and wears sacred Akshata on their head shall remain untainted by false blame even if they accidentally view the Moon."</p>
+            </div>
+        </div>
+    </div>
+    <!-- ENGLISH CONTENT END -->
+
+    <footer>
+        <p>|| Om Sri Varasiddhi Vinayakaya Namah ||</p>
+    </footer>
+
+    <script>
+        function switchLanguage(lang) {
+            const teluguContent = document.getElementById('telugu-content');
+            const englishContent = document.getElementById('english-content');
+            const buttons = document.querySelectorAll('.lang-btn');
+
+            if (lang === 'te') {
+                teluguContent.classList.add('active');
+                englishContent.classList.remove('active');
+                buttons[0].classList.add('active');
+                buttons[1].classList.remove('active');
+                document.documentElement.lang = 'te';
+            } else {
+                englishContent.classList.add('active');
+                teluguContent.classList.remove('active');
+                buttons[1].classList.add('active');
+                buttons[0].classList.remove('active');
+                document.documentElement.lang = 'en';
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
