@@ -4,225 +4,689 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>శ్రీ వినాయక పూజా విధానం & వ్రత కథ | Sri Vinayaka Puja Vidhanam & Vrata Katha</title>
-    <link href="https://fonts.googleapis.com/css2?family=Mandali&family=Tiro+Telugu:ital@0;1&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mandali&family=Marcellus&family=Ramaraja&family=Tiro+Telugu:ital@0;1&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-red: #800000;
-            --saffron: #e65100;
-            --saffron-light: #fff3e0;
-            --gold-accent: #d4af37;
-            --bg-light: #fcf9f2;
-            --card-bg: #ffffff;
-            --text-dark: #2c1d11;
-            --text-muted: #5d4037;
-            --border-color: #e0d0b8;
-            --shadow: 0 10px 30px rgba(128, 0, 0, 0.08);
-        }
+:root {
+    --primary-red: #7d1a12;
+    --saffron: #e07000;
+    --saffron-bright: #ff9933;
+    --gold: #e8b64c;
+    --gold-soft: #d4a237;
+    --gold-bright: #f5d67b;
+    --gold-accent: #d4a237;
+    --bg-deep: #190b07;
+    --bg-deep2: #2e1209;
+    --parchment: #fdf3dd;
+    --parchment-2: #f6e7c8;
+    --ink: #3b2314;
+    --text-muted: #6b4a33;
+    --maroon-panel: #45120c;
+    --line-gold: rgba(212, 162, 55, .45);
+}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-        body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            font-family: 'Mandali', 'Roboto', sans-serif;
-            line-height: 2;
-            background-image: 
-                radial-gradient(circle at 50% 0%, rgba(230, 81, 0, 0.05), transparent 50%),
-                radial-gradient(circle at 100% 100%, rgba(212, 175, 55, 0.05), transparent 50%);
-            background-attachment: fixed;
-            padding-bottom: 80px;
-        }
+html { scroll-behavior: smooth; }
 
-        .lang-switcher {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: #ffffff;
-            border-bottom: 2px solid var(--gold-accent);
-            text-align: center;
-            padding: 12px 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
+body {
+    background: var(--bg-deep);
+    color: var(--ink);
+    font-family: 'Mandali', 'Roboto', sans-serif;
+    line-height: 2;
+    overflow-x: hidden;
+    padding-bottom: 60px;
+}
 
-        .lang-btn {
-            background-color: var(--saffron-light);
-            color: var(--primary-red);
-            border: 2px solid var(--saffron);
-            padding: 8px 24px;
-            margin: 0 8px;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+body::before {
+    content: "";
+    position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background:
+        radial-gradient(ellipse 90% 55% at 50% -5%, rgba(255, 145, 40, .22), transparent 60%),
+        radial-gradient(circle at 12% 30%, rgba(232, 182, 76, .10), transparent 30%),
+        radial-gradient(circle at 88% 65%, rgba(199, 84, 26, .10), transparent 32%),
+        radial-gradient(ellipse 100% 60% at 50% 110%, rgba(120, 40, 10, .30), transparent 65%),
+        linear-gradient(180deg, #200d07 0%, #190b07 45%, #1c0c06 100%),
+        var(--bg-deep);
+}
 
-        .lang-btn.active, .lang-btn:hover {
-            background-color: var(--saffron);
-            color: #ffffff;
-        }
+body::after {
+    content: "";
+    position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    opacity: .5;
+    background-image: radial-gradient(circle, rgba(232, 182, 76, .12) 1px, transparent 1.6px);
+    background-size: 30px 30px;
+    mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
+    -webkit-mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
+}
 
-        header {
-            text-align: center;
-            padding: 40px 20px 30px;
-            background: linear-gradient(135deg, #fff8f0 0%, #fff0e6 100%);
-            border-bottom: 3px solid var(--gold-accent);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-            margin-bottom: 30px;
-        }
+::selection { background: var(--gold); color: #2a1206; }
 
-        header h1 {
-            font-family: 'Tiro Telugu', serif;
-            font-size: 2.3rem;
-            color: var(--primary-red);
-            margin-bottom: 8px;
-        }
+::-webkit-scrollbar { width: 11px; }
+::-webkit-scrollbar-track { background: #1c0d07; }
+::-webkit-scrollbar-thumb { background: linear-gradient(#a8752a, #7a4a12); border-radius: 8px; border: 2px solid #1c0d07; }
 
-        header p {
-            color: var(--saffron);
-            font-size: 1.1rem;
-            font-weight: bold;
-        }
+/* ===== Sticky language bar ===== */
+.lang-switcher {
+    position: sticky; top: 0; z-index: 1000;
+    display: flex; justify-content: center; align-items: center; gap: 10px;
+    padding: 12px 10px;
+    background: rgba(24, 10, 6, .82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line-gold);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .45);
+}
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+.lang-btn {
+    background: transparent;
+    color: var(--gold-bright);
+    border: 1.5px solid var(--gold-soft);
+    padding: 8px 26px;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: inherit;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all .3s ease;
+    letter-spacing: .3px;
+}
 
-        .image-card {
-            text-align: center;
-            margin: 20px 0 35px;
-            padding: 12px;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-        }
+.lang-btn.active, .lang-btn:hover {
+    background: linear-gradient(160deg, var(--gold-bright), var(--gold-soft));
+    color: #2c1405;
+    box-shadow: 0 6px 20px rgba(232, 182, 76, .35);
+}
 
-        .image-card img {
-            max-width: 100%;
-            height: auto;
-            max-height: 380px;
-            border-radius: 12px;
-            object-fit: cover;
-        }
+/* ===== Header hero ===== */
+header {
+    position: relative; z-index: 1;
+    text-align: center;
+    padding: 26px 20px 56px;
+    margin-bottom: 44px;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse 65% 55% at 50% 42%, rgba(255, 160, 50, .16), transparent 70%),
+        linear-gradient(180deg, rgba(58, 22, 10, .55), rgba(25, 11, 7, 0) 85%);
+    border-bottom: 1px solid rgba(212, 162, 55, .28);
+}
 
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 35px;
-            margin-bottom: 30px;
-            box-shadow: var(--shadow);
-        }
+.toran { line-height: 0; margin: -26px -20px 6px; }
+.toran svg { width: 100%; height: 56px; display: block; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, .35)); }
+.toran .leaf-sway { transform-box: fill-box; transform-origin: top center; animation: leafSway 7s ease-in-out infinite; }
+@keyframes leafSway { 50% { transform: rotate(3.5deg); } }
 
-        h2 {
-            font-family: 'Tiro Telugu', serif;
-            color: var(--primary-red);
-            font-size: 1.7rem;
-            margin-top: 10px;
-            margin-bottom: 18px;
-            border-bottom: 2px solid var(--saffron-light);
-            padding-bottom: 8px;
-            position: relative;
-        }
+.hero-art { position: relative; width: 300px; height: 290px; margin: 6px auto 4px; }
+.hero-art .mandala {
+    position: absolute; inset: -18px; width: 336px; height: 336px;
+    left: 50%; top: 50%; transform: translate(-50%, -50%);
+    opacity: .5;
+    animation: mandalaSpin 150s linear infinite;
+}
+@keyframes mandalaSpin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+.hero-art .ganesha {
+    position: absolute; width: 218px; height: 228px; left: 50%; top: 50%;
+    transform: translate(-50%, -52%);
+    filter: drop-shadow(0 0 26px rgba(255, 176, 60, .45)) drop-shadow(0 8px 14px rgba(0, 0, 0, .5));
+    animation: gFloat 9s ease-in-out infinite;
+}
+@keyframes gFloat { 50% { transform: translate(-50%, -55%); } }
+.diya { position: absolute; bottom: 6px; width: 74px; }
+.diya svg { width: 100%; display: block; filter: drop-shadow(0 0 14px rgba(255, 170, 60, .55)); }
+.diya-l { left: -76px; }
+.diya-r { right: -76px; }
+.flame {
+    transform-box: fill-box; transform-origin: 50% 100%;
+    animation: flicker 2.8s ease-in-out infinite;
+}
+.diya-r .flame { animation-delay: .9s; animation-duration: 3.4s; }
+@keyframes flicker {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+    25% { transform: scale(1.08, 1.16) rotate(-2.5deg); opacity: .92; }
+    55% { transform: scale(.94, .9) rotate(2deg); opacity: .85; }
+    78% { transform: scale(1.05, 1.1) rotate(-1.5deg); }
+}
 
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 60px;
-            height: 2px;
-            background-color: var(--saffron);
-        }
+.shloka-line {
+    color: var(--gold-soft);
+    font-family: 'Tiro Telugu', 'Marcellus', serif;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+    margin: 10px 0 4px;
+    opacity: .9;
+}
 
-        .mantra {
-            color: var(--primary-red);
-            background: var(--saffron-light);
-            padding: 20px;
-            border-left: 5px solid var(--saffron);
-            margin: 20px 0;
-            border-radius: 0 12px 12px 0;
-            font-size: 1.1rem;
-            white-space: pre-line;
-            font-weight: 600;
-        }
+header h1 {
+    font-family: 'Ramaraja', 'Marcellus', 'Tiro Telugu', serif;
+    font-size: 2.7rem;
+    line-height: 1.3;
+    color: var(--gold-bright);
+    margin-bottom: 6px;
+    text-shadow: 0 4px 30px rgba(232, 150, 40, .25);
+}
 
-        .grid-2col {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 12px;
-            margin-top: 15px;
-        }
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+    header h1 {
+        background: linear-gradient(175deg, #ffe9b0 15%, var(--gold) 55%, #b07a1f 90%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
 
-        .grid-item {
-            background: #fffcf8;
-            padding: 12px 18px;
-            border-radius: 8px;
-            border: 1px solid #f0e4d4;
-            font-size: 1.05rem;
-            color: var(--text-dark);
-            display: flex;
-            align-items: center;
-        }
+header p {
+    color: #e7b877;
+    font-size: 1.12rem;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
 
-        .grid-item::before {
-            content: '🌸';
-            margin-right: 10px;
-            font-size: 0.9rem;
-        }
+.hero-divider { width: 210px; margin: 16px auto 0; opacity: .9; }
+.hero-divider svg { width: 100%; display: block; }
 
-        .story-section h3 {
-            font-family: 'Tiro Telugu', serif;
-            color: var(--saffron);
-            margin: 30px 0 12px;
-            font-size: 1.35rem;
-            border-bottom: 1px dashed var(--border-color);
-            padding-bottom: 6px;
-        }
+/* ===== Layout ===== */
+.container { max-width: 980px; margin: 0 auto; padding: 0 20px; position: relative; }
+.lang-content .container { position: relative; }
 
-        .story-section p {
-            margin-bottom: 18px;
-            color: var(--text-dark);
-            text-align: justify;
-            font-size: 1.1rem;
-        }
+.image-card { display: none; }
 
-        .lang-content {
-            display: none;
-        }
+/* ===== Parchment manuscript cards ===== */
+.card {
+    position: relative;
+    background:
+        radial-gradient(ellipse 120% 90% at 50% -10%, rgba(255, 255, 255, .55), transparent 55%),
+        repeating-linear-gradient(0deg, rgba(140, 90, 30, .028) 0 2px, transparent 2px 5px),
+        linear-gradient(160deg, var(--parchment) 0%, var(--parchment-2) 100%);
+    border: 1px solid #b98c3f;
+    border-radius: 14px;
+    padding: 40px 36px 34px;
+    margin-bottom: 34px;
+    box-shadow:
+        0 0 0 4px rgba(25, 11, 7, .9),
+        0 0 0 5px rgba(212, 162, 55, .55),
+        0 24px 55px rgba(0, 0, 0, .55),
+        inset 0 0 60px rgba(178, 122, 45, .12);
+    scroll-margin-top: 96px;
+    overflow: hidden;
+}
 
-        .lang-content.active {
-            display: block;
-        }
+.card::before {
+    content: "";
+    position: absolute; inset: 9px;
+    border: 1px solid rgba(169, 118, 39, .5);
+    border-radius: 9px;
+    pointer-events: none;
+}
 
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #fff8f0 0%, #fff0e6 100%);
-            border-top: 3px solid var(--gold-accent);
-            color: var(--primary-red);
-            font-size: 1.3rem;
-            font-weight: bold;
-            font-family: 'Tiro Telugu', serif;
-            margin-top: 50px;
-        }
+.card::after {
+    content: "❁";
+    position: absolute; top: -3px; left: 50%; transform: translateX(-50%);
+    width: 44px; height: 30px;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(160deg, #f7dd9a, var(--gold-soft));
+    color: #6e3c0c;
+    font-size: 15px;
+    border-radius: 0 0 14px 14px;
+    border: 1px solid #a9761f; border-top: 0;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, .3);
+}
 
-        @media (max-width: 768px) {
-            header h1 { font-size: 1.8rem; }
-            .card { padding: 22px; }
-            .container { padding: 0 12px; }
-            .mantra { font-size: 1rem; padding: 15px; }
-        }
+h2 {
+    font-family: 'Ramaraja', 'Marcellus', 'Tiro Telugu', serif;
+    color: var(--primary-red);
+    font-size: 1.85rem;
+    line-height: 1.4;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    position: relative;
+    letter-spacing: .3px;
+}
+
+h2::after {
+    content: "";
+    position: absolute; bottom: 0; left: 0;
+    width: 150px; height: 3px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--saffron), var(--gold), transparent);
+}
+
+h2::before {
+    content: "❖";
+    color: var(--gold-soft);
+    font-size: .85em;
+    margin-right: 10px;
+}
+
+/* ===== Illuminated mantra verses ===== */
+.mantra {
+    position: relative;
+    color: #ffe3a6;
+    background:
+        radial-gradient(ellipse 90% 100% at 50% 0%, rgba(255, 160, 60, .14), transparent 60%),
+        linear-gradient(165deg, #56180f 0%, var(--maroon-panel) 55%, #380e08 100%);
+    padding: 22px 24px 22px 30px;
+    margin: 20px 0;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    white-space: pre-line;
+    font-weight: 600;
+    border: 1px solid rgba(232, 182, 76, .35);
+    box-shadow: inset 0 0 34px rgba(0, 0, 0, .35), 0 6px 18px rgba(0, 0, 0, .25);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .45);
+}
+
+.mantra::before {
+    content: "ॐ";
+    position: absolute; left: 12px; top: 6px;
+    font-size: 17px;
+    color: rgba(245, 214, 123, .6);
+    text-shadow: 0 0 10px rgba(245, 214, 123, .4);
+}
+
+.mantra::after {
+    content: "";
+    position: absolute; left: 0; top: 12px; bottom: 12px;
+    width: 3px; border-radius: 3px;
+    background: linear-gradient(180deg, transparent, var(--gold), transparent);
+}
+
+/* ===== Namavali & offering grids ===== */
+.grid-2col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 11px;
+    margin-top: 15px;
+}
+
+.grid-item {
+    background: linear-gradient(160deg, #fff8e6, #f3e2bd);
+    padding: 11px 16px;
+    border-radius: 10px;
+    border: 1px solid #cfa860;
+    font-size: 1.05rem;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(90, 50, 10, .12);
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.grid-item::before {
+    content: "❁";
+    margin-right: 10px;
+    font-size: .8rem;
+    color: var(--saffron);
+}
+
+.grid-item:hover {
+    transform: translateY(-3px);
+    border-color: var(--saffron);
+    box-shadow: 0 10px 22px rgba(70, 35, 5, .28);
+}
+
+/* ===== Story ===== */
+.story-section h3 {
+    font-family: 'Ramaraja', 'Marcellus', 'Tiro Telugu', serif;
+    color: #a3541b;
+    margin: 32px 0 12px;
+    font-size: 1.4rem;
+    padding-bottom: 7px;
+    border-bottom: 1px dashed rgba(163, 84, 27, .45);
+}
+
+.story-section h3::before { content: "✦ "; color: var(--gold-soft); font-size: .8em; }
+
+.story-section p {
+    margin-bottom: 18px;
+    color: var(--ink);
+    text-align: justify;
+    font-size: 1.1rem;
+}
+
+/* ===== Rules card ===== */
+.rules-card {
+    background:
+        radial-gradient(ellipse 120% 90% at 50% -10%, rgba(255, 255, 255, .6), transparent 55%),
+        linear-gradient(160deg, #fdf5e0, #f8e9c4);
+    box-shadow:
+        0 0 0 4px rgba(25, 11, 7, .9),
+        0 0 0 6px rgba(232, 182, 76, .8),
+        0 0 40px rgba(232, 182, 76, .22),
+        0 24px 55px rgba(0, 0, 0, .55);
+}
+
+.rules-card::after { content: "🪔"; font-size: 14px; }
+
+.rules-intro { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 18px; }
+
+.rules-list { list-style: none; counter-reset: rule; margin: 0; padding: 0; }
+
+.rules-list li {
+    counter-increment: rule;
+    position: relative;
+    padding: 12px 16px 12px 58px;
+    background: linear-gradient(160deg, #fff9ea, #f5e5bf);
+    border: 1px solid #cfa860;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.rules-list li:hover { transform: translateX(5px); box-shadow: 0 8px 18px rgba(70, 35, 5, .2); }
+
+.rules-list li::before {
+    content: counter(rule);
+    position: absolute; left: 14px; top: 13px;
+    width: 30px; height: 30px;
+    background: radial-gradient(circle at 32% 28%, #ffe9ad, var(--gold-soft) 60%, #a9761f);
+    color: #4a2606;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: bold; font-size: .95rem;
+    border: 1px solid #8a5c14;
+    box-shadow: 0 3px 7px rgba(70, 35, 5, .35);
+}
+
+.rules-list li.rule-critical {
+    border-color: #a8322a;
+    background: linear-gradient(160deg, #ffefe6, #fbdcc9);
+}
+
+.rules-list li.rule-critical::before {
+    background: radial-gradient(circle at 32% 28%, #ff9d7e, #b3271b 65%, #7a140c);
+    color: #ffe9dd;
+    border-color: #6d0f08;
+}
+
+/* ===== Footer ===== */
+footer {
+    position: relative; z-index: 1;
+    text-align: center;
+    padding: 46px 20px 40px;
+    margin-top: 56px;
+    color: var(--gold-bright);
+    font-size: 1.35rem;
+    font-weight: bold;
+    font-family: 'Ramaraja', 'Tiro Telugu', serif;
+    background:
+        radial-gradient(ellipse 70% 90% at 50% 100%, rgba(255, 150, 40, .14), transparent 65%),
+        linear-gradient(0deg, rgba(58, 22, 10, .6), transparent 90%);
+    border-top: 1px solid rgba(212, 162, 55, .3);
+    text-shadow: 0 0 22px rgba(232, 182, 76, .35);
+}
+
+footer::before {
+    content: "🐭 ✦ 🪔 ✦ 🐭";
+    display: block;
+    font-family: sans-serif;
+    font-size: 21px;
+    margin-bottom: 10px;
+    opacity: .9;
+    text-shadow: none;
+}
+
+/* ===== Progress + quick controls ===== */
+#readingProgress {
+    position: fixed; left: 0; top: 0; height: 4px; width: 0; z-index: 3000;
+    background: linear-gradient(90deg, #8f1d1d, var(--saffron-bright), var(--gold-bright));
+    box-shadow: 0 0 14px rgba(255, 155, 50, .6);
+}
+
+.quick-tools {
+    position: fixed; left: 18px; bottom: 18px; z-index: 1800;
+    display: flex; flex-direction: column; gap: 8px;
+}
+
+.quick-tools button {
+    width: 44px; height: 44px;
+    border: 1px solid rgba(232, 182, 76, .55);
+    border-radius: 50%;
+    background: linear-gradient(160deg, #fdf3dd, #efdcae);
+    color: #6e3c10;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .45);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.quick-tools button:hover { transform: scale(1.08); background: #fff6dd; }
+.quick-tools button.fbtn { font-size: 13px; font-weight: 800; letter-spacing: .3px; }
+
+/* ===== Section navigator ===== */
+.section-dock {
+    position: fixed; right: 18px; top: 110px; z-index: 1700; width: 226px;
+    background: linear-gradient(165deg, rgba(253, 243, 221, .97), rgba(243, 226, 189, .97));
+    border: 1px solid rgba(169, 118, 31, .6);
+    border-radius: 16px;
+    padding: 10px;
+    box-shadow: 0 0 0 3px rgba(25, 11, 7, .85), 0 18px 40px rgba(0, 0, 0, .5);
+    display: none;
+}
+
+.section-dock.show { display: block; }
+
+.section-dock button {
+    width: 100%; text-align: left; border: 0; background: transparent;
+    padding: 9px 10px; border-radius: 9px;
+    color: #5b3322; cursor: pointer; font-family: inherit; font-size: .98rem;
+}
+
+.section-dock button:hover, .section-dock button.active {
+    background: linear-gradient(90deg, rgba(232, 182, 76, .35), transparent);
+    color: var(--primary-red);
+    font-weight: 700;
+}
+
+/* ===== Spotlight ===== */
+.mushika-target {
+    box-shadow:
+        0 0 0 4px rgba(25, 11, 7, .9),
+        0 0 0 6px var(--gold-bright),
+        0 0 46px rgba(245, 214, 123, .5),
+        0 24px 55px rgba(0, 0, 0, .55) !important;
+}
+
+/* ===== Search overlay ===== */
+.search-panel {
+    position: fixed; inset: 0;
+    background: rgba(12, 5, 2, .68);
+    backdrop-filter: blur(9px);
+    z-index: 2900;
+    display: none; align-items: flex-start; justify-content: center;
+    padding: 12vh 20px;
+}
+
+.search-panel.open { display: flex; }
+
+.search-box {
+    width: min(680px, 100%);
+    background: linear-gradient(165deg, var(--parchment), var(--parchment-2));
+    border: 1px solid #b98c3f;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 0 0 4px rgba(25, 11, 7, .9), 0 0 0 5px rgba(212, 162, 55, .5), 0 30px 80px rgba(0, 0, 0, .6);
+}
+
+.search-box input {
+    width: 100%;
+    font: 600 18px 'Mandali', Roboto, sans-serif;
+    padding: 14px;
+    border: 1px solid #c9a25c;
+    border-radius: 12px;
+    outline: none;
+    background: #fffaf0;
+    color: var(--ink);
+}
+
+.search-box input:focus { border-color: var(--saffron); box-shadow: 0 0 0 3px rgba(224, 112, 0, .18); }
+
+.search-results { max-height: 55vh; overflow: auto; margin-top: 10px; color: var(--text-muted); }
+.search-result { padding: 12px; border-bottom: 1px solid #e3cf9f; cursor: pointer; color: var(--ink); }
+.search-result:hover { background: rgba(232, 182, 76, .22); }
+
+/* ===== Straight column layout + winding trail ===== */
+.trail-svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: visible; }
+.trail-svg .trail-glow { fill: none; stroke: rgba(255, 165, 60, .14); stroke-width: 13; stroke-linecap: round; }
+.trail-svg .trail-line { fill: none; stroke: rgba(232, 182, 76, .8); stroke-width: 3; stroke-dasharray: 1 13; stroke-linecap: round; }
+
+.container > .card {
+    position: relative; z-index: 1;
+    --rot: 0deg; --sx: 0px; --lift: 0px;
+    transform: translate(var(--sx), var(--lift)) rotate(var(--rot));
+    transition: transform 1.2s cubic-bezier(.22, .68, .28, 1), opacity 1.2s ease, box-shadow .45s ease;
+}
+
+.container > .card.pre { opacity: 0; --lift: 26px; }
+.container > .card:hover { --lift: -5px; }
+
+@media (min-width: 900px) {
+    .container > .card { width: 78%; margin-left: auto; margin-right: auto; margin-bottom: 48px; }
+}
+
+@media (max-width: 899px) {
+    .trail-svg { display: none; }
+}
+
+/* ===== Mushika ===== */
+#mushika {
+    position: absolute; left: 0; top: 0; width: 124px; height: 118px; z-index: 0;
+    pointer-events: auto; cursor: pointer; will-change: transform;
+    filter: drop-shadow(0 0 12px rgba(255, 180, 80, .3)) drop-shadow(0 10px 10px rgba(0, 0, 0, .5));
+    -webkit-tap-highlight-color: transparent;
+}
+
+#mushika .mush-inner { width: 100%; height: 100%; transition: transform .45s ease; }
+#mushika.flip .mush-inner { transform: scaleX(-1); }
+#mushika .mush-bob { width: 100%; height: 100%; }
+#mushika.walking .mush-bob { animation: mushWalk .85s ease-in-out infinite; }
+#mushika.hop .mush-bob { animation: mushHop .9s cubic-bezier(.3, 1.5, .4, 1); }
+#mushika .tail { transform-box: fill-box; transform-origin: 85% 15%; animation: tailSway 4s ease-in-out infinite; }
+#mushika .eye-g { transform-box: fill-box; transform-origin: center; animation: mushBlink 4.8s infinite; }
+#mushika .foot { transform-box: fill-box; transform-origin: center; }
+#mushika.walking .foot.f1 { animation: stepA .85s ease-in-out infinite; }
+#mushika.walking .foot.f2 { animation: stepB .85s ease-in-out infinite; }
+#mushika.companion { position: fixed; right: 14px; bottom: 88px; left: auto; top: auto; width: 80px; height: 76px; z-index: 1750; }
+
+@keyframes mushWalk { 50% { transform: translateY(-4px) rotate(-1.5deg); } }
+@keyframes mushHop { 35% { transform: translateY(-16px); } }
+@keyframes tailSway { 50% { transform: rotate(11deg); } }
+@keyframes mushBlink { 0%, 93%, 100% { transform: scaleY(1); } 95.5% { transform: scaleY(.08); } }
+@keyframes stepA { 50% { transform: translateY(-3px); } }
+@keyframes stepB { 0%, 100% { transform: translateY(-3px); } 50% { transform: translateY(0); } }
+
+#mushikaBubble {
+    position: fixed; z-index: 2600; min-width: 170px; max-width: 250px;
+    background: linear-gradient(165deg, #fdf5e0, #f6e7c4);
+    border: 1px solid #b98c3f;
+    border-radius: 14px;
+    padding: 9px 13px;
+    color: #5a2b1c;
+    font: 700 13px/1.4 'Mandali', Roboto, sans-serif;
+    box-shadow: 0 0 0 3px rgba(25, 11, 7, .8), 0 12px 28px rgba(0, 0, 0, .45);
+    opacity: 0; transform: translateY(8px);
+    transition: .45s ease;
+    pointer-events: none;
+}
+
+#mushikaBubble.show { opacity: 1; transform: translateY(0); }
+
+#mushikaBubble::after {
+    content: "";
+    position: absolute; left: 50%; bottom: -7px;
+    width: 13px; height: 13px; margin-left: -7px;
+    background: #f6e7c4;
+    border-right: 1px solid #b98c3f;
+    border-bottom: 1px solid #b98c3f;
+    transform: rotate(45deg);
+}
+
+/* ===== Floating petals ===== */
+.petals { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.petal {
+    position: absolute; top: -30px;
+    width: 14px; height: 14px;
+    background: radial-gradient(circle at 30% 30%, #ffc25e, #f28c1e 65%, #c25e0a);
+    border-radius: 62% 6% 62% 62%;
+    opacity: .55;
+    animation: petalFall linear infinite;
+    box-shadow: 0 0 8px rgba(255, 160, 50, .35);
+}
+
+@keyframes petalFall {
+    0% { transform: translate3d(0, -4vh, 0) rotate(0deg); opacity: 0; }
+    10% { opacity: .5; }
+    88% { opacity: .45; }
+    100% { transform: translate3d(6vw, 106vh, 0) rotate(300deg); opacity: 0; }
+}
+
+/* ===== Language toggle ===== */
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) { .section-dock { display: none !important; } }
+
+@media (max-width: 700px) {
+    header { padding: 20px 14px 42px; }
+    .toran { margin: -20px -14px 4px; }
+    .toran svg { height: 44px; }
+    header h1 { font-size: 1.9rem; }
+    .hero-art { width: 230px; height: 226px; }
+    .hero-art .mandala { width: 258px; height: 258px; }
+    .hero-art .ganesha { width: 168px; height: 176px; }
+    .diya { width: 52px; }
+    .diya-l { left: -46px; }
+    .diya-r { right: -46px; }
+    .card { padding: 30px 19px 26px; }
+    .mantra { font-size: 1rem; padding: 18px 16px 18px 24px; }
+    .quick-tools { left: 10px; bottom: 10px; }
+    .petal { width: 11px; height: 11px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+    #mushika, #mushikaBubble, .trail-svg, .petals { display: none; }
+}
+
     </style>
 </head>
 <body>
+
+<div id="readingProgress"></div>
+
+<div class="quick-tools" aria-label="Quick controls">
+  <button id="searchBtn" title="Search">⌕</button>
+  <button id="dockBtn" title="Sections">☰</button>
+  <button id="topBtn" title="Go to top">↑</button>
+  <button id="fontUp" class="fbtn" title="Bigger text">A+</button>
+  <button id="fontDown" class="fbtn" title="Smaller text">A−</button>
+</div>
+
+<div class="section-dock" id="sectionDock" aria-label="Puja sections">
+  <div style="font-weight:800;color:#8b1e1e;padding:7px 10px 9px">🪷 Quick Guide</div>
+  <div id="dockItems"></div>
+</div>
+
+<div class="search-panel" id="searchPanel">
+  <div class="search-box">
+    <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px">
+      <strong style="font-size:20px;color:#8b1e1e">🔎 Search Puja</strong>
+      <button id="closeSearch" style="margin-left:auto;border:0;background:none;font-size:24px;cursor:pointer">×</button>
+    </div>
+    <input id="searchInput" type="search" placeholder="Search Telugu or English content..." autocomplete="off">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+
+
 
     <!-- Language Selector Header -->
     <div class="lang-switcher">
@@ -658,7 +1122,7 @@
             </div>
 
             <!-- Vinayaka Vrata Katha Full Story Telugu -->
-            <div class="card story-section">
+            <div class="card story-section" id="opening">
                 <h2>శ్రీ వినాయక వ్రత కథ</h2>
                 <p>పూర్వం నైమిశారణ్యంలో సూత మహర్షి శౌనకాది మునులకు శ్రీ వినాయక వ్రత మహత్యాన్ని, వినాయకుని జననాన్ని, మరియు భాద్రపద శుద్ధ చతుర్థి నాడు చంద్రదర్శనం వల్ల కలిగే నీలాపనిందల నివారణోపాయాన్ని ఈ క్రింది విధంగా వివరించారు.</p>
 
@@ -1072,7 +1536,7 @@ Brahmanebhyobhyanujnata Gachhadeva Yatha Sukham ||
             </div>
 
             <!-- Vinayaka Vrata Katha Full Story English -->
-            <div class="card story-section">
+            <div class="card story-section" id="opening-en">
                 <h2>Sri Vinayaka Vrata Katha (The Holy Legend)</h2>
                 <p>In the ancient forest of Naimisharanya, Maharshi Suta narrated the greatness of Vinayaka Vrata, the divine birth of Lord Ganesha, and the remedy for the false accusations caused by looking at the Moon on Bhadrapada Shuddha Chaturthi to Sage Shaunaka and other ascetics as follows:</p>
 
@@ -1147,6 +1611,575 @@ Brahmanebhyobhyanujnata Gachhadeva Yatha Sukham ||
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
+
+<script>
+(function(){
+  'use strict';
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var progress = document.getElementById('readingProgress');
+  var dock = document.getElementById('sectionDock');
+  var dockItems = document.getElementById('dockItems');
+  var searchPanel = document.getElementById('searchPanel');
+  var searchInput = document.getElementById('searchInput');
+  var searchResults = document.getElementById('searchResults');
+
+  var labels = {
+    te:["ప్రారంభ మంత్రాలు","గణపతి పూజ","అంగ పూజ","21 పత్రాలు","అష్టోత్తర శతనామావళి","నైవేద్యాది ఉపచారాలు","వ్రత కథ"],
+    en:["Opening Mantras","Ganapati Puja","Anga Puja","21 Leaves","Ashtottara Shatanamavali","Offerings & Rituals","Vrata Katha"]
+  };
+  var msgs = {
+    te:["ఇక్కడి నుంచి ప్రారంభ మంత్రాలు మరియు సంకల్పం.","ఇప్పుడు గణపతి పూజా విధానాన్ని అనుసరించండి.","ఇది అంగ పూజ విభాగం.","ఇక్కడ 21 పత్రాల పూజ ఉంది.","ఇక్కడ వినాయక అష్టోత్తర శతనామావళి ఉంది.","ఇప్పుడు ధూపం, దీపం, నైవేద్యం మరియు ముగింపు ఉపచారాలు.","చివరగా శ్రీ వినాయక వ్రత కథను చదవండి."],
+    en:["Here are the opening mantras and Sankalpam.","Now follow the Ganapati Puja section.","This is the Anga Puja section.","Here are the 21-leaf offerings.","Here is the Ashtottara Shatanamavali.","Now follow the offerings and concluding rituals.","Finally, read the Sri Vinayaka Vrata Katha."]
+  };
+
+  var currentLang = 'te';
+  var activeCard = null, activeIndex = -1;
+  var sayTimer = 0, lastSaid = -1;
+
+  function root(){ return document.querySelector('.lang-content.active'); }
+  function cards(){
+    var list = root().querySelectorAll('.card'), out = [], i;
+    for(i=0;i<list.length;i++){ if(list[i].offsetParent !== null) out.push(list[i]); }
+    return out;
+  }
+
+  /* ---------------- Devotional artwork (inline SVG) ---------------- */
+  var GOLD_DEFS =
+    '<defs>' +
+      '<linearGradient id="gGold" x1="0" y1="0" x2="0" y2="1">' +
+        '<stop offset="0" stop-color="#f6d98c"/><stop offset=".55" stop-color="#cf9c3a"/><stop offset="1" stop-color="#a9761f"/>' +
+      '</linearGradient>' +
+      '<radialGradient id="flameGrad" cx=".5" cy=".75" r=".8">' +
+        '<stop offset="0" stop-color="#fff6c0"/><stop offset=".45" stop-color="#ffb63a"/><stop offset="1" stop-color="#e5541a"/>' +
+      '</radialGradient>' +
+      '<linearGradient id="leafGrad" x1="0" y1="0" x2="0" y2="1">' +
+        '<stop offset="0" stop-color="#4a9c4e"/><stop offset="1" stop-color="#1e5c24"/>' +
+      '</linearGradient>' +
+    '</defs>';
+
+  function ganeshaSVG(){
+    return '<svg class="ganesha" viewBox="0 0 220 230" xmlns="http://www.w3.org/2000/svg">' + GOLD_DEFS +
+      '<circle cx="110" cy="104" r="92" fill="none" stroke="rgba(232,182,76,.35)" stroke-width="1.5" stroke-dasharray="2 7"/>' +
+      '<ellipse cx="50" cy="88" rx="27" ry="33" fill="url(#gGold) #cf9c3a" stroke="#6e4a12" stroke-width="2"/>' +
+      '<ellipse cx="50" cy="90" rx="16" ry="22" fill="#b07a1f" opacity=".55"/>' +
+      '<ellipse cx="170" cy="88" rx="27" ry="33" fill="url(#gGold) #cf9c3a" stroke="#6e4a12" stroke-width="2"/>' +
+      '<ellipse cx="170" cy="90" rx="16" ry="22" fill="#b07a1f" opacity=".55"/>' +
+      '<ellipse cx="110" cy="168" rx="50" ry="44" fill="url(#gGold) #cf9c3a" stroke="#6e4a12" stroke-width="2.5"/>' +
+      '<ellipse cx="104" cy="176" rx="26" ry="22" fill="#f0c26a" opacity=".5"/>' +
+      '<path d="M64,206 Q110,190 156,206 L152,216 Q110,226 68,216 Z" fill="url(#gGold) #cf9c3a" stroke="#6e4a12" stroke-width="2"/>' +
+      '<ellipse cx="88" cy="214" rx="13" ry="6" fill="#cf9c3a" stroke="#6e4a12" stroke-width="2"/>' +
+      '<ellipse cx="132" cy="214" rx="13" ry="6" fill="#cf9c3a" stroke="#6e4a12" stroke-width="2"/>' +
+      '<path d="M62,182 Q110,198 158,182" fill="none" stroke="#8a5a10" stroke-width="4.5" opacity=".8" stroke-linecap="round"/>' +
+      '<path d="M88,132 C104,152 120,176 132,200" fill="none" stroke="#8a5a10" stroke-width="3" opacity=".65"/>' +
+      '<path d="M72,146 C58,140 48,126 50,112" fill="none" stroke="#cf9c3a" stroke-width="14" stroke-linecap="round"/>' +
+      '<circle cx="50" cy="106" r="10" fill="url(#gGold) #cf9c3a" stroke="#6e4a12" stroke-width="2"/>' +
+      '<path d="M148,146 C162,142 170,130 168,118" fill="none" stroke="#cf9c3a" stroke-width="14" stroke-linecap="round"/>' +
+      '<circle cx="168" cy="112" r="10" fill="url(#gGold) #cf9c3a" stroke="#6e4a12" stroke-width="2"/>' +
+      '<path d="M168,88 C162,92 160,98 163,102 C166,106 172,106 175,102 C178,98 176,92 170,88 C169.4,87.5 168.6,87.5 168,88 Z" fill="#ef7d1a" stroke="#96450a" stroke-width="1.6"/>' +
+      '<circle cx="169" cy="88.5" r="1.4" fill="#ffd98a"/>' +
+      '<path d="M103,112 C100,128 86,134 84,148 C82,160 90,168 100,166 C106,164 107,157 102,156 C95,156 92,151 95,145 C99,136 114,132 116,116 Z" fill="url(#gGold) #cf9c3a" stroke="#6e4a12" stroke-width="2"/>' +
+      '<circle cx="110" cy="86" r="37" fill="url(#gGold) #cf9c3a" stroke="#6e4a12" stroke-width="2.5"/>' +
+      '<path d="M76,66 Q110,30 144,66 Z" fill="url(#gGold) #cf9c3a" stroke="#6e4a12" stroke-width="2"/>' +
+      '<path d="M88,44 Q110,18 132,44 Z" fill="url(#gGold) #cf9c3a" stroke="#6e4a12" stroke-width="2"/>' +
+      '<path d="M98,30 Q110,12 122,30 Z" fill="url(#gGold) #cf9c3a" stroke="#6e4a12" stroke-width="2"/>' +
+      '<circle cx="110" cy="10" r="4" fill="#f6d98c" stroke="#6e4a12" stroke-width="1.5"/>' +
+      '<circle cx="110" cy="52" r="4" fill="#c62828"/>' +
+      '<ellipse cx="110" cy="73" rx="2.5" ry="7" fill="#c62828"/>' +
+      '<path d="M86,84 q9,7 18,1" fill="none" stroke="#6e4a12" stroke-width="2.5" stroke-linecap="round"/>' +
+      '<path d="M116,85 q9,6 18,0" fill="none" stroke="#6e4a12" stroke-width="2.5" stroke-linecap="round"/>' +
+    '</svg>';
+  }
+
+  function mandalaSVG(){
+    var s = '<svg class="mandala" viewBox="0 0 336 336" xmlns="http://www.w3.org/2000/svg">';
+    s += '<circle cx="168" cy="168" r="160" fill="none" stroke="rgba(232,182,76,.4)" stroke-width="1"/>';
+    s += '<circle cx="168" cy="168" r="140" fill="none" stroke="rgba(232,182,76,.35)" stroke-width="1" stroke-dasharray="3 8"/>';
+    s += '<circle cx="168" cy="168" r="64" fill="none" stroke="rgba(232,182,76,.35)" stroke-width="1"/>';
+    var i;
+    for(i = 0; i < 16; i++){
+      s += '<path d="M168,22 C180,52 180,74 168,96 C156,74 156,52 168,22 Z" fill="rgba(232,182,76,.07)" stroke="rgba(232,182,76,.45)" stroke-width="1" transform="rotate(' + (i*22.5) + ' 168 168)"/>';
+    }
+    for(i = 0; i < 8; i++){
+      s += '<circle cx="168" cy="58" r="3" fill="rgba(232,182,76,.5)" transform="rotate(' + (i*45 + 22.5) + ' 168 168)"/>';
+    }
+    return s + '</svg>';
+  }
+
+  function diyaSVG(){
+    return '<svg viewBox="0 0 74 62" xmlns="http://www.w3.org/2000/svg">' + GOLD_DEFS +
+      '<circle cx="37" cy="22" r="15" fill="rgba(255,170,60,.22)"/>' +
+      '<g class="flame">' +
+        '<path d="M37,6 C44,16 46,24 37,32 C28,24 30,16 37,6 Z" fill="url(#flameGrad) #ffb63a"/>' +
+        '<path d="M37,15 C40,20 40,25 37,29 C34,25 34,20 37,15 Z" fill="#fff0b8" opacity=".9"/>' +
+      '</g>' +
+      '<ellipse cx="37" cy="33" rx="4" ry="2" fill="#3a1408"/>' +
+      '<path d="M8,34 Q37,50 66,34 L60,47 Q37,57 14,47 Z" fill="#7c3116" stroke="#3a1408" stroke-width="1.6"/>' +
+      '<path d="M8,34 Q37,45 66,34" fill="none" stroke="#e8b64c" stroke-width="2.5" stroke-linecap="round"/>' +
+    '</svg>';
+  }
+
+  function toranSVG(){
+    var s = '<svg viewBox="0 0 1200 56" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg">' + GOLD_DEFS;
+    s += '<path d="M0,8 Q600,26 1200,8" fill="none" stroke="#b8862a" stroke-width="3"/>';
+    var i, x, t, y;
+    for(i = 0; i < 15; i++){
+      x = 40 + i*80;
+      t = (x - 600)/600;
+      y = 8 + 18*(1 - t*t);
+      if(i % 2 === 0){
+        s += '<g class="leaf-sway" transform="translate(' + x + ',' + y.toFixed(1) + ') rotate(' + ((i%4===0)?-4:4) + ')">' +
+             '<path d="M0,0 C9,7 11,20 3,29 C-2,33 -7,29 -7,20 C-7,9 -4,4 0,0 Z" fill="url(#leafGrad) #3f8b45" stroke="#14401a" stroke-width="1"/>' +
+             '<path d="M0,3 C3,10 3,20 1,26" fill="none" stroke="#a5d6a7" stroke-width=".8" opacity=".7"/></g>';
+      } else {
+        s += '<g transform="translate(' + x + ',' + y.toFixed(1) + ')">' +
+             '<line x1="0" y1="0" x2="0" y2="7" stroke="#b8862a" stroke-width="1.5"/>' +
+             '<circle cx="0" cy="15" r="8" fill="#ff9d1f"/>' +
+             '<circle cx="0" cy="15" r="5" fill="#ffc153"/>' +
+             '<circle cx="0" cy="15" r="2.2" fill="#e07000"/></g>';
+      }
+    }
+    return s + '</svg>';
+  }
+
+  function dividerSVG(){
+    return '<svg viewBox="0 0 210 22" xmlns="http://www.w3.org/2000/svg">' +
+      '<path d="M0,11 H84" stroke="rgba(232,182,76,.7)" stroke-width="1.5"/>' +
+      '<path d="M126,11 H210" stroke="rgba(232,182,76,.7)" stroke-width="1.5"/>' +
+      '<g fill="rgba(232,182,76,.85)">' +
+        '<path d="M105,3 C109,7 109,15 105,19 C101,15 101,7 105,3 Z"/>' +
+        '<path d="M105,3 C109,7 109,15 105,19 C101,15 101,7 105,3 Z" transform="rotate(52 105 11)"/>' +
+        '<path d="M105,3 C109,7 109,15 105,19 C101,15 101,7 105,3 Z" transform="rotate(-52 105 11)"/>' +
+      '</g></svg>';
+  }
+
+  /* Both language headers render the same SVG defs. Duplicate ids meant the
+     English artwork pointed at gradients living inside the hidden Telugu
+     block, so its leaves/flames lost their fill. Suffix ids per header. */
+  var svgUid = 0;
+  function uniquifySVG(html){
+    var uid = 'x' + (++svgUid), names = [];
+    html = html.replace(/id="([A-Za-z][\w-]*)"/g, function(m, name){
+      if(names.indexOf(name) === -1) names.push(name);
+      return 'id="' + name + '-' + uid + '"';
+    });
+    names.forEach(function(name){
+      html = html.split('url(#' + name + ')').join('url(#' + name + '-' + uid + ')');
+    });
+    return html;
+  }
+
+  function decorate(){
+    var headers = document.querySelectorAll('header');
+    headers.forEach(function(h){
+      var isEn = !!h.closest('#english-content');
+      var shloka = isEn ? '|| Om Sri Ganeshaya Namah ||' : '॥ ఓం శ్రీ గణేశాయ నమః ॥';
+      h.insertAdjacentHTML('afterbegin', uniquifySVG(
+        '<div class="toran">' + toranSVG() + '</div>' +
+        '<div class="hero-art">' + mandalaSVG() + ganeshaSVG() +
+          '<div class="diya diya-l">' + diyaSVG() + '</div>' +
+          '<div class="diya diya-r">' + diyaSVG() + '</div>' +
+        '</div>' +
+        '<div class="shloka-line">' + shloka + '</div>'));
+      h.insertAdjacentHTML('beforeend', '<div class="hero-divider">' + dividerSVG() + '</div>');
+    });
+    if(!reduced){
+      var petals = '<div class="petals" aria-hidden="true">';
+      var i;
+      for(i = 0; i < 12; i++){
+        var left = Math.round(Math.random()*100);
+        var dur = (20 + Math.random()*14).toFixed(1);
+        var delay = (Math.random()*20).toFixed(1);
+        var size = (10 + Math.random()*7).toFixed(0);
+        petals += '<span class="petal" style="left:' + left + 'vw;width:' + size + 'px;height:' + size + 'px;animation-duration:' + dur + 's;animation-delay:' + delay + 's"></span>';
+      }
+      document.body.insertAdjacentHTML('afterbegin', petals + '</div>');
+    }
+  }
+
+  /* ---------------- Mushika ---------------- */
+  var MUSHIKA_SVG =
+  '<svg viewBox="0 0 140 120" xmlns="http://www.w3.org/2000/svg">' +
+    '<defs><linearGradient id="mushFur" x1="0" y1="0" x2="1" y2="1">' +
+      '<stop offset="0" stop-color="#c49468"/><stop offset="1" stop-color="#8a5a38"/>' +
+    '</linearGradient></defs>' +
+    '<path class="tail" d="M30,84 C10,86 4,66 16,58 C24,53 30,60 26,66" fill="none" stroke="#7a4a2e" stroke-width="5" stroke-linecap="round"/>' +
+    '<circle cx="84" cy="34" r="12" fill="#9c6a44" stroke="#5b3220" stroke-width="2"/>' +
+    '<ellipse cx="64" cy="80" rx="36" ry="27" fill="url(#mushFur) #a6714a" stroke="#5b3220" stroke-width="2.5"/>' +
+    '<ellipse cx="58" cy="88" rx="20" ry="14" fill="#f3e2c8" opacity=".85"/>' +
+    '<ellipse class="foot f1" cx="48" cy="104" rx="10" ry="5" fill="#a9754c" stroke="#5b3220" stroke-width="2"/>' +
+    '<ellipse class="foot f2" cx="76" cy="105" rx="11" ry="5" fill="#a9754c" stroke="#5b3220" stroke-width="2"/>' +
+    '<path d="M96,78 C90,83 88,90 92,95 C96,99.5 104,99.5 108,95 C112,90 110,83 104,78 C102,75.5 98,75.5 96,78 Z" fill="#ef7d1a" stroke="#96450a" stroke-width="2"/>' +
+    '<path d="M100,79 L95,92 M100,79 L100,94 M100,79 L105,92" stroke="#c65f10" stroke-width="1" opacity=".8" fill="none"/>' +
+    '<circle cx="100" cy="77.5" r="2" fill="#ffd98a"/>' +
+    '<circle cx="93" cy="87" r="5" fill="url(#mushFur) #a6714a" stroke="#5b3220" stroke-width="1.8"/>' +
+    '<circle cx="107" cy="87" r="5" fill="url(#mushFur) #a6714a" stroke="#5b3220" stroke-width="1.8"/>' +
+    '<circle cx="98" cy="56" r="25" fill="url(#mushFur) #a6714a" stroke="#5b3220" stroke-width="2.5"/>' +
+    '<circle cx="93" cy="30" r="15" fill="url(#mushFur) #a6714a" stroke="#5b3220" stroke-width="2.5"/>' +
+    '<circle cx="93" cy="31" r="8.5" fill="#efb5a0"/>' +
+    '<ellipse cx="103" cy="39" rx="2" ry="5" fill="#b21f1f" transform="rotate(8 103 39)"/>' +
+    '<ellipse cx="119" cy="63" rx="10" ry="7.5" fill="url(#mushFur) #a6714a" stroke="#5b3220" stroke-width="2"/>' +
+    '<circle cx="126" cy="61" r="3.6" fill="#3a1f14"/>' +
+    '<path d="M117,70 q4,3 8,0" stroke="#5b3220" stroke-width="1.6" fill="none" stroke-linecap="round"/>' +
+    '<path d="M116,64 L134,58 M117,67 L135,67 M116,70 L133,75" stroke="#6b4630" stroke-width="1.2" opacity=".8" fill="none"/>' +
+    '<g class="eye-g"><ellipse cx="103" cy="53" rx="6.2" ry="6.6" fill="#fff" stroke="#5b3220" stroke-width="1.6"/>' +
+    '<g class="pupil"><circle cx="104.5" cy="54" r="3.1" fill="#241510"/><circle cx="103.4" cy="52.6" r="1.1" fill="#fff"/></g></g>' +
+  '</svg>';
+
+  var mushika = null, bubble = null, pupilG = null;
+  var container = null, containerTop = 0, samples = [], desktopMode = true;
+  var mx = 0, my = 0, faceLeft = false;
+  var pointerX = innerWidth/2, pointerY = innerHeight/2, pointerT = -9999;
+  var bubbleTimer = 0;
+
+  function makeMushika(){
+    mushika = document.createElement('div');
+    mushika.id = 'mushika';
+    mushika.setAttribute('aria-hidden','true');
+    mushika.innerHTML = '<div class="mush-inner"><div class="mush-bob">' + MUSHIKA_SVG + '</div></div>';
+    pupilG = mushika.querySelector('.pupil');
+    bubble = document.createElement('div');
+    bubble.id = 'mushikaBubble';
+    document.body.appendChild(bubble);
+    mushika.addEventListener('click', function(){
+      var list = cards(); if(!list.length) return;
+      var next = list[Math.min(list.length-1, activeIndex < 0 ? 0 : activeIndex+1)];
+      next.scrollIntoView({behavior:'smooth', block:'start'});
+      flash(next);
+      mushika.classList.remove('hop'); void mushika.offsetWidth; mushika.classList.add('hop');
+      say(currentLang === 'te' ? 'పదండి, తర్వాతి విభాగానికి! 🐭' : 'Come along, next section! 🐭');
+    });
+  }
+
+  function smoothPath(pts){
+    if(pts.length < 2) return '';
+    var d = 'M ' + pts[0].x.toFixed(1) + ' ' + pts[0].y.toFixed(1), i;
+    for(i = 0; i < pts.length-1; i++){
+      var p0 = pts[Math.max(0,i-1)], p1 = pts[i], p2 = pts[i+1], p3 = pts[Math.min(pts.length-1,i+2)];
+      var c1x = p1.x + (p2.x-p0.x)/6, c1y = p1.y + (p2.y-p0.y)/6;
+      var c2x = p2.x - (p3.x-p1.x)/6, c2y = p2.y - (p3.y-p1.y)/6;
+      d += ' C ' + c1x.toFixed(1) + ' ' + c1y.toFixed(1) + ', ' + c2x.toFixed(1) + ' ' + c2y.toFixed(1) + ', ' + p2.x.toFixed(1) + ' ' + p2.y.toFixed(1);
+    }
+    return d;
+  }
+
+  function buildTrail(snap){
+    document.querySelectorAll('.trail-svg').forEach(function(e){ e.remove(); });
+    samples = [];
+    var list = cards(); if(!list.length || !container) return;
+    var W = container.clientWidth;
+    var first = list[0], last = list[list.length-1];
+    /* One straight lane down the right gutter. The old path crossed the page
+       for every card, which is what made Mushika dart about card after card. */
+    var cardRight = first.offsetLeft + first.offsetWidth;
+    var laneX = Math.min(W - 70, cardRight + (W - cardRight)/2);
+    var startY = first.offsetTop - 70;
+    var endY = last.offsetTop + last.offsetHeight + 60;
+    var span = Math.max(1, endY - startY);
+    var steps = Math.max(10, Math.round(span/240));
+    var pts = [], k;
+    for(k = 0; k <= steps; k++){
+      var f = k/steps;
+      pts.push({x: laneX + Math.sin(f*Math.PI*3)*8, y: startY + span*f});
+    }
+
+    var svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+    svg.setAttribute('class','trail-svg');
+    var d = smoothPath(pts);
+    var glow = document.createElementNS('http://www.w3.org/2000/svg','path');
+    glow.setAttribute('class','trail-glow'); glow.setAttribute('d', d);
+    var line = document.createElementNS('http://www.w3.org/2000/svg','path');
+    line.setAttribute('class','trail-line'); line.setAttribute('d', d);
+    svg.appendChild(glow); svg.appendChild(line);
+    container.insertBefore(svg, container.firstChild);
+
+    var L = line.getTotalLength(), N = Math.max(240, Math.round(L/8)), prevY = -1e9, i;
+    for(i = 0; i <= N; i++){
+      var p = line.getPointAtLength(L * i / N);
+      var y = Math.max(prevY + 0.01, p.y);
+      samples.push({x: p.x, y: y});
+      prevY = y;
+    }
+    if(snap){
+      var t = targetPoint();
+      if(t){ mx = t.x; my = t.y; }
+    }
+  }
+
+  function targetPoint(){
+    if(!samples.length) return null;
+    var targetY = scrollY + innerHeight*0.45 - containerTop;
+    targetY = Math.max(samples[0].y, Math.min(samples[samples.length-1].y, targetY));
+    var lo = 0, hi = samples.length - 1;
+    while(hi - lo > 1){ var mid = (lo + hi) >> 1; if(samples[mid].y < targetY) lo = mid; else hi = mid; }
+    return Math.abs(samples[lo].y - targetY) < Math.abs(samples[hi].y - targetY) ? samples[lo] : samples[hi];
+  }
+
+  function rebuild(snap){
+    container = root().querySelector('.container');
+    desktopMode = matchMedia('(min-width:900px)').matches;
+    if(reduced || !mushika) return;
+    if(desktopMode){
+      mushika.classList.remove('companion');
+      if(mushika.parentElement !== container) container.appendChild(mushika);
+      containerTop = container.getBoundingClientRect().top + scrollY;
+      buildTrail(snap);
+    } else {
+      samples = [];
+      document.querySelectorAll('.trail-svg').forEach(function(e){ e.remove(); });
+      mushika.classList.add('companion');
+      mushika.classList.add('flip');
+      mushika.style.transform = '';
+      if(mushika.parentElement !== document.body) document.body.appendChild(mushika);
+    }
+  }
+
+  function updateGaze(now){
+    if(!pupilG || !mushika) return;
+    var r = mushika.getBoundingClientRect();
+    var ex = r.left + r.width*0.72, ey = r.top + r.height*0.44;
+    var lx, ly;
+    if(now - pointerT < 2600){ lx = pointerX; ly = pointerY; }
+    else if(activeCard){
+      var cr = activeCard.getBoundingClientRect();
+      lx = cr.left + cr.width/2; ly = cr.top + Math.min(cr.height/2, 240);
+    } else { lx = innerWidth/2; ly = innerHeight/2; }
+    var a = Math.atan2(ly - ey, lx - ex);
+    var ox = Math.cos(a)*2.2, oy = Math.sin(a)*2.2;
+    if(mushika.classList.contains('flip')) ox = -ox;
+    pupilG.style.transform = 'translate(' + ox.toFixed(2) + 'px,' + oy.toFixed(2) + 'px)';
+  }
+
+  function placeBubble(){
+    if(!bubble || !mushika) return;
+    var r = mushika.getBoundingClientRect();
+    var w = bubble.offsetWidth, h = bubble.offsetHeight;
+    var left = Math.max(8, Math.min(innerWidth - w - 8, r.left + r.width/2 - w/2));
+    var top = r.top - h - 14;
+    if(top < 62) top = r.bottom + 14;
+    bubble.style.left = left + 'px';
+    bubble.style.top = top + 'px';
+  }
+
+  function say(text){
+    if(!bubble) return;
+    bubble.textContent = text;
+    bubble.classList.add('show');
+    placeBubble();
+    clearTimeout(bubbleTimer);
+    bubbleTimer = setTimeout(function(){ bubble.classList.remove('show'); }, 4200);
+  }
+
+  var lastFrame = 0;
+  function frame(now){
+    /* delta-time easing keeps the pace identical on 60Hz and 120Hz screens */
+    var dt = lastFrame ? Math.min(64, now - lastFrame) : 16.7;
+    lastFrame = now;
+    var ease = 1 - Math.pow(1 - 0.042, dt/16.7);
+    if(desktopMode && samples.length){
+      var t = targetPoint();
+      if(t){
+        var dx = t.x - mx;
+        mx += (t.x - mx)*ease; my += (t.y - my)*ease;
+        var speed = Math.hypot(t.x - mx, t.y - my);
+        mushika.classList.toggle('walking', speed > 1.6);
+        if(dx < -2.5) faceLeft = true; else if(dx > 2.5) faceLeft = false;
+        mushika.classList.toggle('flip', faceLeft);
+        mushika.style.transform = 'translate3d(' + (mx - 62).toFixed(1) + 'px,' + (my - 102).toFixed(1) + 'px,0)';
+      }
+    } else if(!desktopMode && mushika){
+      var sway = Math.sin(scrollY/320)*10, bob = Math.sin(now/900)*3;
+      mushika.style.transform = 'translate3d(' + sway.toFixed(1) + 'px,' + bob.toFixed(1) + 'px,0)';
+    }
+    updateGaze(now);
+    if(bubble && bubble.classList.contains('show')) placeBubble();
+    requestAnimationFrame(frame);
+  }
+
+  /* ---------------- Dock, highlight, progress ---------------- */
+  function rebuildDock(){
+    dockItems.innerHTML = '';
+    cards().forEach(function(c, i){
+      var b = document.createElement('button');
+      var h2 = c.querySelector('h2');
+      b.textContent = (labels[currentLang][i] || (h2 ? h2.textContent : 'Section ' + (i+1))).trim();
+      b.onclick = function(){ c.scrollIntoView({behavior:'smooth', block:'start'}); flash(c); };
+      dockItems.appendChild(b);
+    });
+  }
+
+  function flash(card){
+    document.querySelectorAll('.mushika-target').forEach(function(x){ x.classList.remove('mushika-target'); });
+    card.classList.add('mushika-target');
+    setTimeout(function(){ card.classList.remove('mushika-target'); }, 2400);
+  }
+
+  function chooseActive(){
+    var list = cards(); if(!list.length) return;
+    var mid = scrollY + innerHeight*0.42;
+    var best = list[0], bestDist = Infinity, bestIndex = 0;
+    list.forEach(function(c, i){
+      var y = c.getBoundingClientRect().top + scrollY;
+      var d = Math.abs(y - mid);
+      if(d < bestDist){ best = c; bestDist = d; bestIndex = i; }
+    });
+    if(best !== activeCard){
+      activeCard = best; activeIndex = bestIndex;
+      var buttons = dockItems.children, i;
+      for(i = 0; i < buttons.length; i++) buttons[i].classList.toggle('active', i === bestIndex);
+      /* announce only once scrolling settles, so passing several cards
+         quickly does not fire message after message */
+      clearTimeout(sayTimer);
+      sayTimer = setTimeout(function(){
+        if(activeIndex !== bestIndex || bestIndex === lastSaid) return;
+        lastSaid = bestIndex;
+        say(msgs[currentLang][bestIndex] || (currentLang === 'te' ? 'నేను మీకు దారి చూపిస్తాను 🐭' : "I'll guide you through the puja 🐭"));
+      }, 900);
+    }
+  }
+
+  var ticking = false;
+  addEventListener('scroll', function(){
+    if(ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = (max > 0 ? (scrollY/max)*100 : 0) + '%';
+      chooseActive();
+      ticking = false;
+    });
+  }, {passive:true});
+
+  /* ---------------- Damped wheel scrolling ---------------- */
+  (function smoothWheel(){
+    if(reduced) return;
+    if(matchMedia('(hover: none)').matches) return;   /* touch keeps native inertia */
+    var target = 0, running = false, engaged = false;
+
+    var docEl = document.documentElement;
+    function limit(){ return docEl.scrollHeight - innerHeight; }
+    function jump(y){
+      /* bypass html{scroll-behavior:smooth} so our own easing is the only one running */
+      docEl.style.scrollBehavior = 'auto';
+      scrollTo(0, y);
+      docEl.style.scrollBehavior = '';
+    }
+    function step(){
+      var diff = target - scrollY;
+      if(Math.abs(diff) < 0.5){ jump(target); running = false; engaged = false; return; }
+      jump(scrollY + diff*0.11);
+      requestAnimationFrame(step);
+    }
+    addEventListener('wheel', function(e){
+      if(e.ctrlKey || e.defaultPrevented) return;
+      if(e.target.closest && e.target.closest('.search-panel, .section-dock, .search-results')) return;
+      var d = e.deltaY;
+      if(e.deltaMode === 1) d *= 18;
+      else if(e.deltaMode === 2) d *= innerHeight;
+      if(!d) return;
+      e.preventDefault();
+      if(!engaged){ target = scrollY; engaged = true; }
+      target = Math.max(0, Math.min(limit(), target + d*0.9));
+      if(!running){ running = true; requestAnimationFrame(step); }
+    }, {passive:false});
+    addEventListener('keydown', function(){ engaged = false; });
+  })();
+
+  addEventListener('pointermove', function(e){
+    pointerX = e.clientX; pointerY = e.clientY; pointerT = performance.now();
+  }, {passive:true});
+
+  /* ---------------- Reveal animation ---------------- */
+  if(!reduced && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.remove('pre'); io.unobserve(en.target); }
+      });
+    }, {threshold: 0.06, rootMargin: '0px 0px -6% 0px'});
+    document.querySelectorAll('.lang-content .card').forEach(function(c){
+      c.classList.add('pre'); io.observe(c);
+    });
+  }
+
+  /* ---------------- Quick tools ---------------- */
+  document.getElementById('dockBtn').onclick = function(){ dock.classList.toggle('show'); };
+  document.getElementById('topBtn').onclick = function(){ scrollTo({top:0, behavior:'smooth'}); };
+
+  var FS = [100,109,118,127], fi = 0, fsTimer = 0;
+  function applyFS(){
+    document.documentElement.style.fontSize = FS[fi] + '%';
+    clearTimeout(fsTimer);
+    fsTimer = setTimeout(function(){ rebuild(true); }, 350);
+  }
+  document.getElementById('fontUp').onclick = function(){ if(fi < FS.length-1){ fi++; applyFS(); } };
+  document.getElementById('fontDown').onclick = function(){ if(fi > 0){ fi--; applyFS(); } };
+
+  /* ---------------- Search ---------------- */
+  document.getElementById('searchBtn').onclick = function(){
+    searchPanel.classList.add('open'); searchInput.focus(); renderSearch('');
+  };
+  document.getElementById('closeSearch').onclick = function(){ searchPanel.classList.remove('open'); };
+  searchPanel.addEventListener('click', function(e){ if(e.target === searchPanel) searchPanel.classList.remove('open'); });
+
+  function htmlEscape(s){
+    return s.replace(/[&<>"']/g, function(m){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m];
+    });
+  }
+  function renderSearch(q){
+    var all = Array.prototype.slice.call(root().querySelectorAll('h1,h2,h3,p,.grid-item'));
+    var needle = q.trim().toLowerCase();
+    var matches = needle ? all.filter(function(x){ return x.textContent.toLowerCase().indexOf(needle) !== -1; }).slice(0,30) : [];
+    searchResults.innerHTML = matches.length ? matches.map(function(x, i){
+      var text = x.textContent.trim().replace(/\s+/g,' ');
+      return '<div class="search-result" data-i="' + i + '">' + htmlEscape(text.slice(0,180)) + (text.length > 180 ? '…' : '') + '</div>';
+    }).join('') : (needle ? 'No matching content found.' : 'Type a word such as "Ganapati", "Naivedyam", "వ్రత కథ"…');
+    Array.prototype.forEach.call(searchResults.children, function(el, i){
+      el.onclick = function(){
+        matches[i].scrollIntoView({behavior:'smooth', block:'center'});
+        searchPanel.classList.remove('open');
+        flash(matches[i].closest('.card') || matches[i]);
+      };
+    });
+  }
+  searchInput.addEventListener('input', function(){ renderSearch(searchInput.value); });
+  addEventListener('keydown', function(e){
+    if(e.key === 'Escape') searchPanel.classList.remove('open');
+    if((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k'){ e.preventDefault(); document.getElementById('searchBtn').click(); }
+  });
+
+  /* ---------------- Language sync ---------------- */
+  var originalSwitch = window.switchLanguage;
+  window.switchLanguage = function(lang){
+    originalSwitch(lang);
+    currentLang = lang;
+    rebuildDock();
+    setTimeout(function(){ rebuild(true); chooseActive(); }, 80);
+  };
+
+  /* ---------------- Init ---------------- */
+  decorate();
+  if(!reduced) makeMushika();
+  rebuildDock();
+  rebuild(true);
+  chooseActive();
+  if(!reduced) requestAnimationFrame(frame);
+
+  var rzTimer = 0;
+  addEventListener('resize', function(){
+    clearTimeout(rzTimer);
+    rzTimer = setTimeout(function(){ rebuild(true); }, 160);
+  });
+  addEventListener('load', function(){ rebuild(true); });
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ rebuild(true); });
+
+  if(!reduced){
+    setTimeout(function(){
+      say(currentLang === 'te' ? 'నేను ముషిక! స్క్రోల్ చేయండి, దారి పొడవునా మీతో నడుస్తాను 🐭' : "I'm Mushika! Scroll and I'll walk the trail with you 🐭");
+    }, 900);
+  }
+})();
+</script>
+
 </body>
     <!-- github pages deployment -->
 </html>
